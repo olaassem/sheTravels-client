@@ -2,11 +2,9 @@ import React from 'react';
 import './Main.css';
 import {Switch, Route} from 'react-router-dom';
 
-
-import Home from '../Home/Home';
-import Login from '../Login/Login';
-
-
+import Landing from '../Landing/Landing';
+import Homepage from '../Homepage/Homepage';
+import Review from '../Review/Review';
 
 export default class Main extends React.Component{
   render(){
@@ -15,8 +13,9 @@ export default class Main extends React.Component{
 
 
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/homepage" component={Homepage} />
+          <Route exact path="/review" component={Review} />
         </Switch>
 
 

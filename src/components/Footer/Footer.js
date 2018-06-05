@@ -4,7 +4,7 @@ import './Footer.css';
 export default class Footer extends React.Component{
   render(){
     return(
-      <p className="footer">Footer Test</p>
+      <p className="footer">Footer PlaceHolder</p>
     )
   }
 }

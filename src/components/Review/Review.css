@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.testing{
+  padding:100px;
+}
+
+.mapform-container{
+  padding-top: 140px;
+}

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 100vh;
+  padding: 45px 15px;
+}
+
+.sub-header{
+  text-transform: lowercase;
+}
+
+.appname{
+  margin-top: 200px;
+  font-size: 60px;
+}

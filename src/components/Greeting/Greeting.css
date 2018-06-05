@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+.greeting{
+  height: 25vh;
+  padding: 120px 15px;
+}

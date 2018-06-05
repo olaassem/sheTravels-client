@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+fieldset{
+  border: 0 none;
+  padding-bottom: 0px;
+}
+
+.login-form{
+  float: right;
+  color: #3B3B3B;
+}
+
+.submit-login{
+  margin-right: 50px;
+}
+
+.login-btn{
+  background: #5680e9;
+  cursor: pointer;
+  color: #edf5e1;
+  padding: 7px 12px;
+}
+
+.register-link{
+  margin: 5px;
+  margin-top: 12px;
+}

@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 .footer{
-  color:navy;
+  color: white;
+  background-color: #96DEDA;
+  height: 50px;
+  width: 100%;
+  /* position: absolute; */
+  bottom: 0;
+  margin-bottom: 0;
 }
