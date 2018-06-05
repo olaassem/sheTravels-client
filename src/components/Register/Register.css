@@ -2,10 +2,16 @@
   box-sizing: border-box;
 }
 
+.register-section{
+  background-color: grey;
+  margin-top:0px;
+  margin-bottom: 0px;
+}
+
 .register-container{
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
   max-width: 500px;
+  background-color: white;
 }
 
 
@@ -42,8 +48,4 @@ select{
   display: block;
   font-size: 20px;
   text-indent: 5px;
-}
-
-select option{
-
 }

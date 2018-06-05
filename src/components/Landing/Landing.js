@@ -1,6 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
+
 import './Landing.css';
 import '../../grid.css';
+
 
 import LandingHeader from '../LandingHeader/LandingHeader';
 import JoinPitch from '../JoinPitch/JoinPitch';
@@ -13,13 +17,14 @@ export default class Landing extends React.Component{
     return(
       <div>
         <LandingHeader />
+        <Link to ="/homepage">Homepage</Link>
         <div className="joinpitch-section">
           <div className="row">
             <JoinPitch title="Why Join 1" content="content placeholder 1"/>
             <JoinPitch title="Why Join 2" content="content placeholder 2"/>
             <JoinPitch title="Why Join 3" content="content placeholder 3"/>
           </div>
-        </div>  
+        </div>
         <Register />
       </div>
     )

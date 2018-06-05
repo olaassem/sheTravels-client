@@ -4,6 +4,7 @@ import './Register.css';
 export default class Register extends React.Component{
   render(){
     return(
+      <div className="register-section">
       <div className="row">
         <div className="col-12">
           <div className="register-container">
@@ -23,9 +24,9 @@ export default class Register extends React.Component{
                     <input type="password" name='password' id='password' />
                   </div>
                   <div>
-                    <label htmlFor="country">Country</label>
+                    <label htmlFor="country">Country of Residence</label>
                     <select>
-                      <option value="select">Select Country</option>
+                      <option disabled="disabled" selected="selected">Select Country</option>
                     	<option value="AF">Afghanistan</option>
                     	<option value="AX">Åland Islands</option>
                     	<option value="AL">Albania</option>
@@ -282,8 +283,8 @@ export default class Register extends React.Component{
 
                     <div className="custom-select">
                       <select>
-                        <option value="select">Select Age Group</option>
-                        <option value="teens">teens</option>
+                        <option disabled="disabled" selected="selected">Select Age Group</option>
+                        <option value="teens">Teens</option>
                         <option value="20s">20s</option>
                         <option value="30s">30s</option>
                         <option value="40s">40s</option>
@@ -298,6 +299,7 @@ export default class Register extends React.Component{
                   <button className="register-btn" type="submit">Register</button>
         </fieldset>
       </form>
+      </div>
       </div>
       </div>
       </div>

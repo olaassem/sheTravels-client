@@ -1,29 +1,109 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-fieldset{
-  border: 0 none;
-  padding-bottom: 0px;
+nav{
+  padding: 0px;
+}
+
+.login-container{
+  padding: 0px;
 }
 
 .login-form{
-  float: right;
+  margin: auto;
   color: #3B3B3B;
+  float: right;
 }
 
-.submit-login{
-  margin-right: 50px;
+.login-form label{
+  font-size: 17px;
+  margin-right: 5px;
+  /* text-transform: uppercase; */
+}
+
+.login-form fieldset{
+  border: 0 none;
+  padding: 0px;
+}
+
+
+.username-container,
+.password-container{
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.login-form label{
+  float: left;
+  padding-top: 7px;
+}
+
+
+.login-form input{
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  border: none;
+}
+
+
+.login-btn-container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-btn{
-  background: #5680e9;
+  background: #fc4445;
   cursor: pointer;
-  color: #edf5e1;
+  color: white;
   padding: 7px 12px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+  font-size: 15px;
+  margin-top: 24px;
+  max-width: 200px;
+  transition: background-color 0.5s ease;
+}
+
+.login-btn:hover{
+  background-color: #DB57DB;
 }
 
 .register-link{
   margin: 5px;
   margin-top: 12px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.register-link-link:link {
+    text-decoration: none;
+    color: #3B3B3B;
+    padding: 5px;
+}
+
+.register-link-link:visited {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+
+.register-link-link:hover {
+  color: #3B3B3B;
+
+}
+
+.register-link-link:active {
+    text-decoration: none;
+    color: #3B3B3B;
 }

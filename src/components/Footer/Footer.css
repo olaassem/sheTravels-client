@@ -2,12 +2,21 @@
   box-sizing: border-box;
 }
 
-.footer{
-  color: white;
-  background-color: #96DEDA;
-  height: 50px;
+footer{
+  color: #3B3B3B;
+  background-color: #3feee6;
+  height: 45px;
   width: 100%;
-  /* position: absolute; */
   bottom: 0;
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.footer-content{
+  margin: auto;
+  padding-top:10px;
+  top: 20px;
+}
+
+.footer-p{
+  margin: 0px;
 }
