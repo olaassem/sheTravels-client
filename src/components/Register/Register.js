@@ -21,7 +21,7 @@ export default class Register extends React.Component{
                   </div>
                   <div>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name='password' id='password' />
+                    <input type="password" name='password' id='password' placeholder="Must be at least 10 characters."/>
                   </div>
                   <div>
                     <label htmlFor="country">Country of Residence</label>

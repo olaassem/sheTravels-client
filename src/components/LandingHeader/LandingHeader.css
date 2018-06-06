@@ -6,9 +6,12 @@
 header {
   height: 100vh;
   padding: 45px 15px;
-  background-image: url("https://www.born05.com/wp-content/uploads/2016/04/highlightimage_ifly50_born05_04.jpg");
+  background-image: url("../../assets/o.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+
 }
 
 .sub-header{

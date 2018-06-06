@@ -17,6 +17,16 @@ footer{
   top: 20px;
 }
 
-.footer-p{
-  margin: 0px;
+.githubIcon-container{
+  float: right;
+  margin: 0px 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.linkedinIcon-container{
+  float: left;
+  margin: 0px 10px;
+  width: 30px;
+  height: 30px;
 }
