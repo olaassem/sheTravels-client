@@ -14,6 +14,8 @@ nav{
   margin: auto;
   color: #3B3B3B;
   float: right;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .login-form label{

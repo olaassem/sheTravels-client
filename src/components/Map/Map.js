@@ -34,9 +34,12 @@ export default class Map extends React.Component {
 
   render() {
     return (
-      <div id="map">
-
+      <div className="row">
+        <div className="col-12">
+          <div id="map"></div>
+        </div>
       </div>
+
     )
   }
 }

@@ -4,7 +4,38 @@
 
 
 .placedetails-container{
-  border: 2px solid grey;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid grey;
   margin:60px;
   padding:30px;
+}
+
+
+.destination-img-container{
+  width: 150px;
+  height: 150px;
+  border: grey solid 1px;
+  float: left;
+  margin-right: 15px
+}
+
+.location,
+.address{
+  text-align: left;
+}
+
+.review-btn{
+  margin: 7px auto 2px;
+  margin-right: auto;
+  background: #fc4445;
+  cursor: pointer;
+  color: white;
+  padding: 12px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  /* transition: background-color 0.5s ease; */
+  border: none;
 }

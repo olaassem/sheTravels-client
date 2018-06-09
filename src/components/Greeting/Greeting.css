@@ -1,8 +1,42 @@
+/* #a6d4f4; */
+/* #FFF77D; */
+
+
 * {
   box-sizing: border-box;
 }
 
 .greeting{
-  height: 25vh;
+  margin-top: 80px;
+  /* background-color: #cafafe; */
   padding: 120px 15px;
+}
+
+
+.choice{
+  margin-bottom: 50px;
+}
+
+.review-link,
+.explore-link{
+  background-color: #cafafe;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  height: 200px;
+  width: 250px;
+  /* border: 1px solid red; */
+}
+
+.review-img,
+.explore-img{
+  width: 200px;
+  height:200px;
+  margin:15px;
+  margin-top: 0px;
+}
+
+
+.link{
+  font-size: 23px;
 }
