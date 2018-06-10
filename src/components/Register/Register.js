@@ -11,7 +11,7 @@ import './Register.css';
 class Register extends React.Component{
 
   componentDidMount() {
-    // let firstName;
+    let firstName = document.getElementById('firstName').value;
     // let userName;
     // let password;
     // let country;
@@ -20,9 +20,9 @@ class Register extends React.Component{
     let user;
   }
 
-  postUser(e){
+  registerUser(e){
     e.preventDefault();
-    this.props.registerUser({firstName:"Ola"}
+    this.props.registerUser("Zoya"
 
     //   {
     //   firstName: "Zoya",
@@ -345,7 +345,7 @@ class Register extends React.Component{
             <button
               className="register-btn"
               type="submit"
-              onClick={this.postUser.bind(this)}> Register
+              onClick={this.registerUser.bind(this)}> Register
             </button>
           </fieldset>
          </form>

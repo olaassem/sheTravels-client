@@ -1,10 +1,10 @@
-import {SAVE_NEW_USER_CREDS} from '../actions/index'; //import ACTION
+import {REGISTER_USER} from '../actions/index'; //import ACTION
 
 
 
 //Initial state for the reducer --> initial state for the user
 const INITIAL_STATE = {
-  saveNewUserCred:[] //empty array bc initial state will be nothing. you always have to define. it can be null, etc but needs to be defined!!!
+  registerUser:[] //empty array bc initial state will be nothing. you always have to define. it can be null, etc but needs to be defined!!!
 }
 
 //takes two params: state and action
@@ -13,12 +13,12 @@ const INITIAL_STATE = {
 export default function(state=INITIAL_STATE, action){
   switch (action.type){
 
-    case SAVE_NEW_USER_CREDS:
+    case REGISTER_USER:
     debugger
     //Return the new state.
     //has to be a new state combined with the prior state(s).
     //same as this.setState
-      return { ...state, saveNewUserCred: action.payload } //will pull prior state
+      return { ...state, registerUser: action.payload } //will pull prior state
 
     //in a reducer you always have to return a state or else you get an error!!
     default:

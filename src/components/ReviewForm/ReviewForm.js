@@ -26,80 +26,117 @@ export default class ReviewForm extends React.Component{
       <div className="row">
       <div className="col-12">
         <form className="review-form">
-        <fieldset>
-          <legend>Review "location"</legend>
-
-              <div>
-                <label  htmlFor="">When did you visit?</label>
+          <fieldset>
+            <legend>Review "location"</legend>
+              <div className="question-container">
+                <label htmlFor="">When did you visit?</label>
+                <br/>
                 <input type="month" id="visitDate"/>
               </div>
 
-              <div>
+              <div className="question-container">
                 <label htmlFor="">How long did you stay?</label>
+                <br/>
                 <input type="text" id="duration"/>
               </div>
 
-              <div>
+              <div className="question-container">
                 <label htmlFor="">Overall Experience</label>
-                <input type="text" id="rating"/>
+								<div className="row">
+									<div className="col-7">
+										<label htmlFor="incredible"><input type="radio" name="experience" value="Incredible" />Incredible</label>
+									</div>
+									<div className="col-7">
+										<label htmlFor="good"><input type="radio" name="experience" value="Good" />Good</label>
+									</div>
+									<div className="col-7">
+										<label htmlFor="average"><input type="radio" name="experience" value="Average" />Average</label>
+									</div>
+									<div className="col-7">
+										<label htmlFor="bad"><input type="radio" name="experience" value="Bad" />Bad</label>
+									</div>
+                  <div className="col-7">
+										<label htmlFor="awful"><input type="radio" name="experience" value="Awful" />Awful</label>
+									</div>
+                </div>
               </div>
 
-
-              <div>
-                <label htmlFor="">Safety</label>
-                <input type="text" id="safety"/>
+              <div className="question-container">
+                <label htmlFor="">Personal Safety & Security</label>
+                <div className="row">
+									<div className="col-3">
+										<label htmlFor="verysafe"><input type="radio" name="safety" value="verysafe" />Very Safe</label>
+									</div>
+									<div className="col-3">
+										<label htmlFor="safe"><input type="radio" name="safety" value="safe" />Safe</label>
+									</div>
+									<div className="col-3">
+										<label htmlFor="unsafe"><input type="radio" name="safety" value="unsafe" />Unsafe. Reconsider going.</label>
+									</div>
+                  <div className="col-3">
+									  <label htmlFor="veryunsafe"><input type="radio" name="safety" value="veryunsafe" />Very Unsafe. Do not go.</label>
+								</div>
               </div>
+            </div>
 
-              <div>
-                <label htmlFor="">Hospitality</label>
+              <div className="question-container">
+                <label htmlFor="">Friendliness</label>
+                <br/>
                 <input type="text" id="hospitality"/>
               </div>
 
-              <div>
+              <div className="question-container">
                 <label htmlFor="">Dress Code</label>
+                <br/>
                 <input type="text" id="dress"/>
               </div>
 
-              <div>
+              <div className="question-container">
                 <label htmlFor="">Affordability</label>
-                <input type="text" id="affordability"/>
+                <br/>
+                <div className="row">
+									<div className="col-7">
+										<label htmlFor="VeryExpensive"><input type="radio" name="budget" value="VeryExpensive" />Very Expensive</label>
+									</div>
+									<div className="col-7">
+										<label htmlFor="Expensive"><input type="radio" name="budget" value="Expensive" />Expensive</label>
+									</div>
+									<div className="col-7">
+										<label htmlFor="Average"><input type="radio" name="budget" value="Average" />Average</label>
+									</div>
+									<div className="col-7">
+										<label htmlFor="cheap"><input type="radio" name="budget" value="Cheap" />Cheap</label>
+									</div>
+                  <div className="col-7">
+										<label htmlFor="verycheap"><input type="radio" name="budget" value="VeryCheap" />Very Cheap</label>
+									</div>
+                </div>
               </div>
 
-              <div>
+              <div className="question-container">
                 <label htmlFor="">Ease of getting there & out</label>
+                <br/>
                 <input type="text" id="access"/>
               </div>
 
-              <div>
+              <div className="question-container">
                 <label htmlFor="">Review Title</label>
+                <br/>
                 <input type="text" id="title"/>
               </div>
 
-              <div>
+              <div className="question-container">
                 <label htmlFor="">Review Summary</label>
-                <input type="text" id="summary"/>
+                <br/>
+                <textarea id="summary"></textarea>
               </div>
 
               <div className="row">
                 <div className="col-12">
-                  <button class="submit-review-btn">Submit</button>
+                  <button className="submit-review-btn">Submit</button>
                 </div>
               </div>
             </fieldset>
-          </form>
-        </div>
-
-        <div>
-          <form id="ratingForm">
-            <fieldset class="rating">
-                <legend>Please rate:</legend>
-                <input type="radio" id="star5" className="rating" value="5" /><label for="star5" title="Rocked!">5 stars</label>
-                <input type="radio" id="star4" className="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                <input type="radio" id="star3" className="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                <input type="radio" id="star2" className="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                <input type="radio" id="star1" className="rating" value="1" /><label for="star1" title="Sucked big time">1 star</label>
-              </fieldset>
-            <div class="clearfix"></div>
           </form>
         </div>
       </div>

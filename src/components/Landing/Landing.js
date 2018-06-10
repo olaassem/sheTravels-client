@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 
 import './Landing.css';
@@ -17,7 +16,6 @@ export default class Landing extends React.Component{
     return(
       <div>
         <LandingHeader />
-        <Link to ="/homepage">Homepage</Link>
         <div className="joinpitch-section">
           <div className="row">
             <JoinPitch title="Why Join 1" content="content placeholder 1"/>

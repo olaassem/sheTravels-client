@@ -5,23 +5,23 @@ const root_url = "http://localhost:8080";
 //differentiate naming convention to show that its a type
 export const FETCH_ALL_REVIEWS = "FETCH_ALL_REVIEWS";
 export const SAVE_SEARCH_LOCATION = "SAVE_SEARCH_LOCATION";
-export const SAVE_NEW_USER_CREDS = "SAVE_NEW_USER_CREDS";
+export const REGISTER_USER = "REGISTER_USER";
 
 
 
-//U S E R
+// A U T H O R I Z A T I O N
 export const registerUser = (user) => {
   // const request = {
   //   name: firstName,
   //   username: userName,
-  //   password: password,
-  //   country: country,
-  //   age: age,
+  //   password,
+  //   country,
+  //   age,
   //   created: date
   // }
   debugger
   return{
-    type: SAVE_NEW_USER_CREDS,
+    type: REGISTER_USER,
     payload: user
   }
 }

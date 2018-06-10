@@ -1,0 +1,28 @@
+.nav-btn a{
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.fas{
+  font-size: 35px;
+  color: #fc4445;
+  margin-bottom: 5px;
+}
+
+.nav-btn{
+  background: transparent;
+  float:right;
+  align-items: right;
+  justify-content: center;
+  border: none;
+  margin-left: 20px;
+  width: 60px;
+}
+
+.logo{
+  width: 129px;
+  height: 60px;
+  float: left;
+  margin-left: 0px;
+  margin-right:0px;
+}

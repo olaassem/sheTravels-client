@@ -6,6 +6,8 @@ import Landing from '../Landing/Landing';
 import Homepage from '../Homepage/Homepage';
 import Review from '../Review/Review';
 
+import Register from '../Register/Register';
+
 export default class Main extends React.Component{
   render(){
     return(

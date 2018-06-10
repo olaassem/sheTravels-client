@@ -61,6 +61,12 @@ nav{
   justify-content: center;
 }
 
+.login-btn a{
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+
 .login-btn{
   background: #fc4445;
   cursor: pointer;
@@ -84,7 +90,7 @@ nav{
 
 .register-link{
   margin: 5px;
-  margin-top: 12px;
+  margin-top: 1px;
   font-size: 17px;
   margin-bottom: 10px;
 }

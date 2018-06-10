@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import './Login.css';
 
 export default class Login extends React.Component{
@@ -24,7 +26,7 @@ export default class Login extends React.Component{
                 </div>
                 <div className="col-4">
                   <div className="login-btn-container">
-                    <button className="login-btn">Log In</button>
+                    <button className="login-btn"><Link to="/homepage">Log In</Link></button>
                   </div>
                 </div>
               </div>

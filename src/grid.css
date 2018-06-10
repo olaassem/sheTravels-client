@@ -59,7 +59,7 @@
 
 /* Non-mobile, grid */
 @media only screen and (min-width: 640px) {
-  
+
 /*  .col-test{
     width: 8%;
   }*/
@@ -81,7 +81,7 @@
 
   /* 7 columns 7/12 in % */
   .col-7{
-  	width: 14%;
+  	width: 20%;
   }
 
   /* 8 columns 8/12 in % */

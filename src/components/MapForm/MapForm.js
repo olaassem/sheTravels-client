@@ -55,7 +55,6 @@ findLocation(e){
 }
 
   render() {
-    debugger
     return (
       <form className="mapform">
         <fieldset >
