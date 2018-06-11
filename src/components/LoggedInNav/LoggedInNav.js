@@ -20,15 +20,15 @@ export default class Login extends React.Component{
             </button>
 
             <button className="nav-btn">
-              <Link className="link" to="/explore"><i class="fas fa-map-signs"></i>Explore</Link>
+              <Link className="link" to="/explore"><i className="fas fa-map-signs"></i>Explore</Link>
             </button>
 
             <button className="nav-btn">
-              <Link className="link" to="/review"><i class="fas fa-star"></i>Review</Link>
+              <Link className="link" to="/review"><i className="fas fa-star"></i>Review</Link>
             </button>
 
             <button className="nav-btn">
-              <Link className="link" to="/homepage"><i class="fas fa-home"></i><br/>Home</Link>
+              <Link className="link" to="/homepage"><i className="fas fa-home"></i><br/>Home</Link>
             </button>
 
           </div>
