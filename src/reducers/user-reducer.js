@@ -4,7 +4,7 @@ import {REGISTER_USER} from '../actions/index'; //import ACTION
 
 //Initial state for the reducer --> initial state for the user
 const INITIAL_STATE = {
-  registerUser:[] //empty array bc initial state will be nothing. you always have to define. it can be null, etc but needs to be defined!!!
+  registerUser:{} //empty array bc initial state will be nothing. you always have to define. it can be null, etc but needs to be defined!!!
 }
 
 //takes two params: state and action

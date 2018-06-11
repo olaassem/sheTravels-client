@@ -2,7 +2,7 @@
 //will then export one compiled reducer which is the state
 
 import {combineReducers} from 'redux';
-import reviewsReducer from './reviews-reducer';
+import reviewsReducer from './review-reducer';
 import locationReducer from './location-reducer';
 import userReducer from './user-reducer';
 

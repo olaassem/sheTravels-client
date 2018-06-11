@@ -1,4 +1,4 @@
-import {FETCH_ALL_REVIEWS} from '../actions/index'; //import type
+import {POST_REVIEW, FETCH_ALL_REVIEWS} from '../actions/index'; //import type
 
 
 
@@ -16,7 +16,10 @@ export default function(state=INITIAL_STATE, action){
     //Return the new state.
     //has to be a new state combined with the prior state(s).
     //same as this.setState
-      return { ...state, allreviews: action.payload } //will pull prior state
+      return { ...state, allreviews: action.payload };//will pull prior state
+
+    case POST_REVIEW:
+      return { ...state, allreviews: action.payload };
 
     //in a reducer you always have to return a state or else you get an error!!
     default:

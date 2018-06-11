@@ -22,8 +22,8 @@
 }
 
 
-#firstName,
-#userName,
+#name,
+#username,
 #password,
 .register-container select{
   font-size: 20px;

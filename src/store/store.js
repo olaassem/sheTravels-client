@@ -1,8 +1,11 @@
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 
 //get all reducers
 //{} for functions and class
 import rootReducer from '../reducers/index';
+import promise from 'redux-promise';
 
-//create store of root reducer
-export default createStore(rootReducer);
+const middlewares = [promise];
+
+
+export default createStore(rootReducer, (applyMiddleware(...middlewares)))

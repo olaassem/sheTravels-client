@@ -48,7 +48,7 @@
   border: 1px solid #cafafe;
 }
 
-#visitDate{
+#visit{
   font-size: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -67,6 +67,14 @@
 
 .question-container label {
   font-size: 18px;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  color: #060d46;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  height: 100%;
+  border: 1px solid #cafafe;
 }
 
 textarea {
@@ -79,23 +87,12 @@ textarea {
 }
 
 
-label {
-    padding: 10px;
-    background-color: white;
-    display: flex;
-    color: #060d46;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    height: 100%;
-    border: 1px solid #cafafe;
-}
-
-
-label:hover, label:focus {
+.question-container label:hover,
+.question-container label:focus {
     background-color: #cafafe;
   }
 
-input[type="radio"]{
+.question-container input[type="radio"]{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -112,7 +109,7 @@ input[type="radio"]{
     margin-right: 10px;
 }
 
-input[type="radio"]:checked{
+.question-container input[type="radio"]:checked{
     border: 8px solid #fc4445;
 }
 

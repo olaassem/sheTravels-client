@@ -7,38 +7,44 @@ import './Register.css';
 
 
 
-
+//create COMPONENT initial state (diff from redux state)
 class Register extends React.Component{
+  constructor(props){
+    super(props);
+      this.state = {
+        name: "",
+        username: "",
+        password: "",
+        country: "",
+        age: ""
+      }
+    }
 
-  componentDidMount() {
-    let firstName = document.getElementById('firstName').value;
-    // let userName;
-    // let password;
-    // let country;
-    // let age;
-    // let date;
-    let user;
+
+//match the 'name' of input to key in state
+  handleChange(e){
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
+
 
   registerUser(e){
     e.preventDefault();
-    this.props.registerUser("Zoya"
-
-    //   {
-    //   firstName: "Zoya",
-    //   userName: "SuperZoya",
-    //   password: "pass1234567890",
-    //   country: "U.S.",
-    //   age: "22",
-    //   date: "January 1, 2001"
-    // }
-
-    );
+    console.log(this.state);
+    this.props.registerUser(this.state);
+    this.setState({
+      name: "",
+      username: "",
+      password: "",
+      country: "",
+      age: ""
+    });
   }
 
 
+
   render(){
-    debugger
     return(
       <div className="register-section">
         <div className="row">
@@ -48,21 +54,23 @@ class Register extends React.Component{
                 <fieldset>
                   <legend className="register-legend">Join the Community</legend>
                     <div>
-                      <label htmlFor="firstName">First Name</label>
+                      <label htmlFor="name">First Name</label>
                       <input
                         type="text"
-                        name='firstName'
-                        id='firstName'
+                        name='name'
+                        id='name'
                         required
+                        onChange={this.handleChange.bind(this)}
                       />
                     </div>
                     <div>
-                      <label htmlFor="userName">Username</label>
+                      <label htmlFor="username">Username</label>
                       <input
                         type="text"
-                        name='userName'
-                        id='userName'
+                        name='username'
+                        id='username'
                         required
+                        onChange={this.handleChange.bind(this)}
                         />
                     </div>
                     <div>
@@ -71,11 +79,12 @@ class Register extends React.Component{
                         type="password"
                         name='password'
                         id='password'
-                        placeholder="Must be at least 10 characters."/>
+                        placeholder="Must be at least 10 characters."
+                        onChange={this.handleChange.bind(this)}/>
                     </div>
                     <div>
                       <label htmlFor="country">Country of Residence</label>
-                      <select>
+                      <select name="country" onChange={this.handleChange.bind(this)}>
                         <option disabled="disabled" selected="selected">Select Country</option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -330,7 +339,7 @@ class Register extends React.Component{
 
                   <label htmlFor="agegroup">Age Group</label>
                     <div className="custom-select">
-                      <select>
+                      <select name="age" onChange={this.handleChange.bind(this)}>
                         <option disabled="disabled" selected="selected">Select Age Group</option>
                         <option id="age" value="Teens">Teens</option>
                         <option id="age" value="20s">20s</option>
@@ -345,7 +354,8 @@ class Register extends React.Component{
             <button
               className="register-btn"
               type="submit"
-              onClick={this.registerUser.bind(this)}> Register
+              onClick={this.registerUser.bind(this)}>
+              Register
             </button>
           </fieldset>
          </form>
