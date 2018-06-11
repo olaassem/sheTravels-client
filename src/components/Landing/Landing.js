@@ -4,7 +4,7 @@ import React from 'react';
 import './Landing.css';
 import '../../grid.css';
 
-
+import Login from '../Login/Login';
 import LandingHeader from '../LandingHeader/LandingHeader';
 import JoinPitch from '../JoinPitch/JoinPitch';
 import Register from '../Register/Register';
@@ -15,6 +15,7 @@ export default class Landing extends React.Component{
   render(){
     return(
       <div>
+        <Login />
         <LandingHeader />
         <div className="joinpitch-section">
           <div className="row">

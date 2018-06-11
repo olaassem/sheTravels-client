@@ -3,7 +3,7 @@ import React from 'react';
 import './Review.css';
 import '../../grid.css';
 
-
+import LoggedInNav from '../LoggedInNav/LoggedInNav';
 import MapForm from '../MapForm/MapForm';
 import MapFormResult from '../MapFormResult/MapFormResult';
 import ReviewForm from '../ReviewForm/ReviewForm';
@@ -11,15 +11,15 @@ import ReviewForm from '../ReviewForm/ReviewForm';
 export default class Review extends React.Component{
   render(){
     return(
-      <section>
+      <div>
+        <LoggedInNav />
+        <div className="mapform-container">
+          <MapForm />
+          <MapFormResult />
+          <ReviewForm />
+        </div>
 
-            <div className="mapform-container">
-              <MapForm />
-              <MapFormResult />
-              <ReviewForm />
-            </div>
-
-      </section>
+      </div>
     )
   }
 }
