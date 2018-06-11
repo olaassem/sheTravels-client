@@ -94,7 +94,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="rating"
                             id="incredible"
-                            value="Incredible" />
+                            value="Incredible"
+                            onChange={this.handleChange.bind(this)}/>
                           Incredible
                         </label>
                       </div>
@@ -104,7 +105,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="rating"
                             id="good"
-                            value="Good" />
+                            value="Good"
+                            onChange={this.handleChange.bind(this)}/>
                           Good
                         </label>
                       </div>
@@ -114,7 +116,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="rating"
                             id="average"
-                            value="Average" />
+                            value="Average"
+                            onChange={this.handleChange.bind(this)}/>
                           Average
                         </label>
                       </div>
@@ -124,7 +127,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="rating"
                             id="bad"
-                            value="Bad" />
+                            value="Bad"
+                            onChange={this.handleChange.bind(this)}/>
                           Bad
                         </label>
                       </div>
@@ -134,7 +138,8 @@ class ReviewForm extends React.Component{
                           type="radio"
                           name="rating"
                           id="awful"
-                          value="Horrible" />
+                          value="Horrible"
+                          onChange={this.handleChange.bind(this)}/>
                         Awful
                       </label>
                       </div>
@@ -152,7 +157,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="safety"
                             id="verysafe"
-                            value="Very safe" />
+                            value="Very safe"
+                            onChange={this.handleChange.bind(this)}/>
                           Very Safe
                         </label>
                       </div>
@@ -162,7 +168,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="safety"
                             id="safe"
-                            value="Safe" />
+                            value="Safe"
+                            onChange={this.handleChange.bind(this)}/>
                           Safe
                         </label>
                       </div>
@@ -172,7 +179,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="safety"
                             id="unsafe"
-                            value="Unsafe. Reconsider going." />
+                            value="Unsafe. Reconsider going."
+                            onChange={this.handleChange.bind(this)}/>
                           Unsafe. Reconsider going.
                         </label>
                       </div>
@@ -182,7 +190,8 @@ class ReviewForm extends React.Component{
                             type="radio"
                             name="safety"
                             id="veryunsafe"
-                            value="Very Unsafe. Do not go." />
+                            value="Very Unsafe. Do not go."
+                            onChange={this.handleChange.bind(this)}/>
                           Very Unsafe. Do not go.
                         </label>
                       </div>
@@ -200,7 +209,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="dress"
                         id="anything"
-                        value="Whatever you like" />
+                        value="Whatever you like"
+                        onChange={this.handleChange.bind(this)}/>
                       Whatever you like
                     </label>
                   </div>
@@ -210,7 +220,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="dress"
                         id="modest"
-                        value="No sleeveless, cleavage, or above the knees" />
+                        value="No sleeveless, cleavage, or above the knees"
+                        onChange={this.handleChange.bind(this)}/>
                       No sleeveless, cleavage, or above the knees
                     </label>
                   </div>
@@ -220,7 +231,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="dress"
                         id="full"
-                        value="Full cover up" />
+                        value="Full cover up"
+                        onChange={this.handleChange.bind(this)}/>
                       Full cover up
                     </label>
                   </div>
@@ -236,7 +248,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="affordability"
                         id="veryexpensive"
-                        value="Very Expensive" />
+                        value="Very Expensive"
+                        onChange={this.handleChange.bind(this)}/>
                       Very Expensive
                     </label>
 									</div>
@@ -246,7 +259,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="affordability"
                         id="expensive"
-                        value="Expensive" />
+                        value="Expensive"
+                        onChange={this.handleChange.bind(this)}/>
                       Expensive
                     </label>
 									</div>
@@ -256,7 +270,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="affordability"
                         id="avg"
-                        value="Average" />
+                        value="Average"
+                        onChange={this.handleChange.bind(this)}/>
                       Average
                     </label>
 									</div>
@@ -266,7 +281,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="affordability"
                         id="cheap"
-                        value="Cheap" />
+                        value="Cheap"
+                        onChange={this.handleChange.bind(this)}/>
                       Cheap
                     </label>
 									</div>
@@ -276,7 +292,8 @@ class ReviewForm extends React.Component{
                         type="radio"
                         name="affordability"
                         id="verycheap"
-                        value="Very Cheap" />
+                        value="Very Cheap"
+                        onChange={this.handleChange.bind(this)}/>
                       Very Cheap
                     </label>
 									</div>
@@ -290,7 +307,8 @@ class ReviewForm extends React.Component{
                     <input
                       type="text"
                       name="title"
-                      id="title"/>
+                      id="title"
+                      onChange={this.handleChange.bind(this)}/>
                   </div>
                 </div>
               </div>
@@ -302,7 +320,8 @@ class ReviewForm extends React.Component{
                     <textarea
                       name="summary"
                       id="summary"
-                      placeholder="">
+                      placeholder=""
+                      onChange={this.handleChange.bind(this)}>
                     </textarea>
                   </div>
                 </div>
