@@ -354,8 +354,7 @@ class Register extends React.Component{
             <button
               className="register-btn"
               type="submit"
-              onClick={this.registerUser.bind(this)}>
-              Register
+              onClick={this.registerUser.bind(this)}> Register
             </button>
           </fieldset>
          </form>

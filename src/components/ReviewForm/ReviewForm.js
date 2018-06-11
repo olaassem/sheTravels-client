@@ -39,7 +39,7 @@ class ReviewForm extends React.Component{
   postNewReview(e){
     e.preventDefault();
     console.log(this.state);
-    this.props.registerUser(this.state);
+    this.props.postReview(this.state);
   }
 
 
@@ -311,9 +311,8 @@ class ReviewForm extends React.Component{
               <div className="row">
                 <div className="col-12">
                   <button
-                    className="submit-review-btn">
-                    onClick={this.postNewReview.bind(this)}>
-                    Submit
+                    className="submit-review-btn"
+                    onClick={this.postNewReview.bind(this)}> Submit
                   </button>
                 </div>
               </div>
