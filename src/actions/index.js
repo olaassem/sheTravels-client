@@ -17,7 +17,6 @@ export const FETCH_ALL_REVIEWS = "FETCH_ALL_REVIEWS";
 // A U T H O R I Z A T I O N
 
 export const registerUser = (user) => {
-  debugger
   const request = axios.post(`${root_url}/user/register`, user)
   return{
     type: REGISTER_USER,
@@ -30,7 +29,6 @@ export const registerUser = (user) => {
 // R E V I E W S
 
 export const postReview = (review) =>{
-  debugger
   const request = axios.post(`${root_url}/review/new`, review)
   return{
     type: POST_REVIEW,
@@ -40,14 +38,14 @@ export const postReview = (review) =>{
 
 
 export const fetchAllReviews = () => {
-  //make a request to api
-  const request = axios.get(`${root_url}/review/allreviews`)
-
-  //will return type to work w reducers
-  return {
-    type: FETCH_ALL_REVIEWS,
-    payload: request
-  }
+  return axios.get(`${root_url}/review/allreviews`)
+  .then(request => {
+    return {
+      type: FETCH_ALL_REVIEWS,
+      payload: request
+      }
+    }
+  )
 }
 
 

@@ -16,7 +16,7 @@ export default function(state=INITIAL_STATE, action){
     //Return the new state.
     //has to be a new state combined with the prior state(s).
     //same as this.setState
-      return { ...state, allreviews: action.payload };//will pull prior state
+      return { ...state, allreviews: action.payload.data };//will pull prior state
 
     case POST_REVIEW:
       return { ...state, allreviews: action.payload };
