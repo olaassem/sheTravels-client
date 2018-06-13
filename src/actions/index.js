@@ -3,7 +3,9 @@ const root_url = "http://localhost:8080";
 
 //all caps means is something used for code not in business model (a type)
 //differentiate naming convention to show that its a type
-export const REGISTER_USER = "REGISTER_USER";
+export const REGISTER = "REGISTER";
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
 
 export const SAVE_SEARCH_LOCATION = "SAVE_SEARCH_LOCATION";
 
@@ -19,10 +21,22 @@ export const FETCH_ALL_REVIEWS = "FETCH_ALL_REVIEWS";
 export const registerUser = (user) => {
   const request = axios.post(`${root_url}/user/register`, user)
   return{
-    type: REGISTER_USER,
+    type: REGISTER,
     payload: request
   }
 }
+
+export const loginUser = (user) => {
+  const request = axios.post(`${root_url}/user/login`, user)
+  return{
+    type: LOGIN,
+    payload: request
+  }
+}
+
+export const logout = () => ({
+  type: LOGOUT
+});
 
 
 

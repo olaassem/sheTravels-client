@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 import './Map.css';
 import '../../grid.css';
@@ -13,7 +13,6 @@ export default class Map extends React.Component {
         lng: 116.275482
       };
 
-
       console.log(location);
 
       //New map
@@ -21,7 +20,6 @@ export default class Map extends React.Component {
         zoom: 15,
         center: location
       });
-
 
 
       //Location marker

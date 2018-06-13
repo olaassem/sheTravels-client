@@ -1,26 +1,32 @@
-import {REGISTER_USER} from '../actions/index'; //import ACTION
+import {REGISTER} from '../actions/index';
+import {LOGIN} from '../actions/index';
+import {LOGOUT} from '../actions/index';
 
 
 
-//Initial state for the reducer --> initial state for the user
+
 const INITIAL_STATE = {
-  registerUser:{} //empty array bc initial state will be nothing. you always have to define. it can be null, etc but needs to be defined!!!
+  auth:{}
 }
 
-//takes two params: state and action
-//state is everywhere: on component on reducers
-//if the state come w info, that will be the state. if not, or null it will be the initial state.
 export default function(state=INITIAL_STATE, action){
   switch (action.type){
 
-    case REGISTER_USER:
+    case REGISTER:
     debugger
-    //Return the new state.
-    //has to be a new state combined with the prior state(s).
-    //same as this.setState
-      return { ...state, registerUser: action.payload } //will pull prior state
+      return { ...state, auth: action.payload }
 
-    //in a reducer you always have to return a state or else you get an error!!
+
+    case LOGIN:
+    debugger
+      return { ...state, auth: action.payload }
+
+
+    case LOGOUT:
+    debugger
+      return { ...state, auth: action.payload }
+
+
     default:
       return state;
   }

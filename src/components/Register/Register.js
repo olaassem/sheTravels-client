@@ -371,7 +371,7 @@ class Register extends React.Component{
 function mapStateToProps(state){
     return{
       //return key you want to use and the value from the reducer
-      newUser: state.users.saveNewUserCred
+      newUser: state.users.auth
     }
 }
 

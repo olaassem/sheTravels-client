@@ -7,7 +7,6 @@ import Homepage from '../Homepage/Homepage';
 import Review from '../Review/Review';
 import Explore from '../Explore/Explore';
 
-import Register from '../Register/Register';
 
 export default class Main extends React.Component{
   render(){

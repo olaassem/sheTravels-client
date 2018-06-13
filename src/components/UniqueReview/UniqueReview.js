@@ -14,16 +14,23 @@ class UniqueReview extends React.Component{
 
 
   render(){
-    let reviewItem;
     let dbReviews = this.props.allReviews;
     console.log(dbReviews);
     // if(dbReviews.length > 0){
-    //   reviewItem = dbReviews.map((item, index) => {
+    //   let reviewItem = dbReviews.map((review, index) => {
     //     return (
     //       <div className="row">
     //         <div className="col-12">
     //           <div className="uniquereview-container" key={index}>
-    //             <p className="uniqueReviewRating">{item.rating}</p>
+    //               <p className="uniqueReviewVisit">Submitted on: {review.submitted}</p>
+    //               <p className="uniqueReviewTitle">Title: {review.title}</p>
+    //               <p className="uniqueReviewRating">Overall Experience: {review.rating}</p>
+    //               <p className="uniqueReviewRating">Visited: {review.visit}</p>
+    //               <p className="uniqueReviewRating">Length of Visit: {review.duration}</p>
+    //               <p className="uniqueReviewRating">Personal Safety & Security: {review.safety}</p>
+    //               <p className="uniqueReviewVisit">Affordability: {review.affordability}</p>
+    //               <p className="uniqueReviewRating">Dress: {review.dress}</p>
+    //               <p className="uniqueReviewRating">Summary: {review.summary}</p>
     //           </div>
     //         </div>
     //       </div>
@@ -32,7 +39,6 @@ class UniqueReview extends React.Component{
     // };
     return (
       <div>
-        // {reviewItem}
       </div>
     )
   }

@@ -1,9 +1,35 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {loginUser} from '../../actions/index'; //action we want to trigger
 
 import './Login.css';
 
-export default class Login extends React.Component{
+class Login extends React.Component{
+  constructor(props){
+    super(props);
+      this.state = {
+        username: "",
+        password: ""
+      }
+    }
+
+  handleChange(e){
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  loginUser(e){
+    e.preventDefault();
+    console.log(this.state);
+    this.props.loginUser(this.state);
+    this.setState({
+      username: "",
+      password: ""
+    });
+  }
+
   render(){
     return(
       <div>
@@ -19,19 +45,28 @@ export default class Login extends React.Component{
                         <label htmlFor="username-login">Username</label>
                         <input
                           type="text"
-                          id="firstname-login"/>
+                          id="firstname-login"
+                          name="name"
+                          required
+                          onChange={this.handleChange.bind(this)}/>
                       </div>
                     </div>
                     <div className="col-4">
                       <div className="password-container">
                         <label htmlFor="pass-login">Password</label>
-                        <input type="text" id="pass-login"/>
+                        <input
+                          type="text"
+                          id="pass-login"
+                          name="password"
+                          required
+                          onChange={this.handleChange.bind(this)}/>
                       </div>
                     </div>
                     <div className="col-4">
                       <div className="login-btn-container">
                         <button
-                          className="login-btn">
+                          className="login-btn"
+                          onClick={this.loginUser.bind(this)}>
                           <Link to="/homepage">Log In
                           </Link>
                         </button>
@@ -51,3 +86,13 @@ export default class Login extends React.Component{
     )
   }
 }
+
+
+
+function mapStateToProps(state){
+    return{
+      currentUser: state.users.auth
+    }
+}
+
+export default connect(mapStateToProps, {loginUser})(Login);

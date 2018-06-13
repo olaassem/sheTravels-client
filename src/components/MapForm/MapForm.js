@@ -1,12 +1,21 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {saveCurrentLocation} from '../../actions/index'; //action we want to trigger
+import {saveCurrentLocation} from '../../actions/index';
 
 import './MapForm.css';
 import '../../grid.css';
 
 //create class w/out export default
 class MapForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      address: "",
+      queryLatitude: "",
+      queryLongitude: "",
+      placeid: ""
+    }
+  }
 
   componentDidMount() {
 
@@ -37,22 +46,48 @@ class MapForm extends React.Component {
       			let queryLongitude = results[0].geometry.location.lng();
             let placeid = results[0].place_id;
 
-    console.log(placeid);
-            //Call api functions and pass lat and lng params through them
-      			// initMap( queryLatitude, queryLongitude );
-            // getDetails( placeid );
-            	//if invalid query input
+
+            console.log(queryLatitude);
+            console.log(queryLongitude);
+            console.log(placeid);
+
+            // handleChange(e){
+            //   this.setState({
+            //     address,
+            //     queryLatitude,
+            //     queryLongitude,
+            //     placeid
+            //   });
+            // }
+
+
+            console.log(this.state);
+
+
           	} else {
           		console.log( status );
           	}
         	});
+
+
     });
   }
 
-findLocation(e){
-  e.preventDefault();
-  this.props.saveCurrentLocation("Lincoln Memorial");
-}
+  // handleChange(e){
+  //   this.setState({
+  //     address,
+  //     queryLatitude,
+  //     queryLongitude,
+  //     placeid
+  //   });
+  // }
+
+
+
+  // findLocation(e){
+  //   e.preventDefault();
+    // this.props.saveCurrentLocation("Lincoln Memorial");
+  // }
 
   render() {
     return (
@@ -63,11 +98,16 @@ findLocation(e){
             <input id = "autocomplete"
               type = "text"
               placeholder = "e.g. Temple of Heaven"
-              required = ""
+              required
+              // onChange={this.handleChange.bind(this)}
             />
           <div className = "row" >
             <div className = "col-12" >
-              <button type = "submit" id ="search-btn" onClick={this.findLocation.bind(this)}> Find < /button>
+              <button
+                type = "submit"
+                id = "search-btn">
+                Find
+              </button>
             </div>
           </div>
         </div>
@@ -77,18 +117,11 @@ findLocation(e){
   }
 }
 
-//mapping the state(this.reducer) to props(in component)
+
 function mapStateToProps(state){
     return{
-      //return key you want to use and the value from the reducer
       currentLocation: state.location.currentSearchLocation
     }
 }
-//return object
-// function mapDispatchToProps(){
-//     {saveCurrentLocation}     //the value is the action variable imported on top
-// }
 
-//calling connect function
-//1.connect reducer with componenet, 2. connect action w component
-export default connect(mapStateToProps, {saveCurrentLocation})(MapForm); //(MapForm here is the same as export default)
+export default connect(mapStateToProps, {saveCurrentLocation})(MapForm);
