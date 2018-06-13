@@ -34,7 +34,7 @@ export const loginUser = (user) => {
   }
 }
 
-export const logout = () => ({
+export const logoutUser = () => ({
   type: LOGOUT
 });
 
