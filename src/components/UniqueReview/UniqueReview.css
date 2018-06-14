@@ -1,3 +1,11 @@
 .uniquereview-container{
   border: grey solid 2px;
+  margin: 20px;
+  text-align: left;
+  padding: 10px 30px;
+}
+
+.stars{
+  height: 30px;
+  width: 35px;
 }

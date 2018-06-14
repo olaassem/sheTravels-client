@@ -1,30 +1,43 @@
-import {REGISTER} from '../actions/index';
-import {LOGIN} from '../actions/index';
-import {LOGOUT} from '../actions/index';
+import {REGISTER, LOGIN, LOGOUT} from '../actions/index';
+import {saveAuthInfo, clearLocalStorage} from '../LocalStorage';
 
 
 
-
+//login: false
 const INITIAL_STATE = {
-  auth:{}
+  loginRedirect: false
 }
 
 export default function(state=INITIAL_STATE, action){
+  //error handler
+  if(action.error){
+    return state
+  }
+
   switch (action.type){
-
+    //register user and set local storage
     case REGISTER:
+    console.log(saveAuthInfo)
+
     debugger
-      return { ...state, auth: action.payload }
+      return state = {...state, loginRedirect: false};
 
-
+    //login user and set local storage
     case LOGIN:
     debugger
-      return { ...state, auth: action.payload }
+      saveAuthInfo(
+        action.payload.data.data.token,
+        action.payload.data.data.userID,
+        action.payload.data.data.name,
+        action.payload.data.data.country,
+        action.payload.data.data.age,
+      );
+      return state = {...state, loginRedirect: true};
 
-
+    //clear local storage
     case LOGOUT:
-    debugger
-      return { ...state, auth: action.payload }
+      clearLocalStorage();
+      return state = {...state, loginRedirect: false};
 
 
     default:

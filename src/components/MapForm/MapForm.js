@@ -40,16 +40,16 @@ class MapForm extends React.Component {
       geocoder.geocode({
       		'address': address
       	}, function( results, status ){
-      		//if valid query input
+
+          console.log(results[0]);
+
       		if (status === 'OK') {
+
+            let placeid = results[0].place_id;
       			let queryLatitude = results[0].geometry.location.lat();
       			let queryLongitude = results[0].geometry.location.lng();
-            let placeid = results[0].place_id;
+            let formattedAddress = results[0].formatted_address;
 
-
-            console.log(queryLatitude);
-            console.log(queryLongitude);
-            console.log(placeid);
 
             // handleChange(e){
             //   this.setState({
@@ -61,7 +61,7 @@ class MapForm extends React.Component {
             // }
 
 
-            console.log(this.state);
+            console.log(`state: ` + this.state);
 
 
           	} else {

@@ -1,10 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {loginUser} from '../../actions/index'; //action we want to trigger
+import {loginUser} from '../../actions/index';
+import {Redirect} from 'react-router-dom';
 
 import './Login.css';
 
+
+//store userId
 class Login extends React.Component{
   constructor(props){
     super(props);
@@ -45,9 +47,10 @@ class Login extends React.Component{
                         <label htmlFor="username-login">Username</label>
                         <input
                           type="text"
-                          id="firstname-login"
-                          name="name"
+                          id="login-username"
+                          name="username"
                           required
+                          value={this.state.username}
                           onChange={this.handleChange.bind(this)}/>
                       </div>
                     </div>
@@ -56,9 +59,10 @@ class Login extends React.Component{
                         <label htmlFor="pass-login">Password</label>
                         <input
                           type="text"
-                          id="pass-login"
+                          id="login-password"
                           name="password"
                           required
+                          value={this.state.password}
                           onChange={this.handleChange.bind(this)}/>
                       </div>
                     </div>
@@ -66,9 +70,7 @@ class Login extends React.Component{
                       <div className="login-btn-container">
                         <button
                           className="login-btn"
-                          onClick={this.loginUser.bind(this)}>
-                          <Link to="/homepage">Log In
-                          </Link>
+                          onClick={this.loginUser.bind(this)}> Log In
                         </button>
                       </div>
                     </div>
@@ -77,6 +79,7 @@ class Login extends React.Component{
                       <a className="register-link-link" href="#register-header">Register</a>
                     </p>
                   </fieldset>
+                  {localStorage.getItem('token') && (<Redirect to="/homepage"/>)}
                 </form>
               </div>
             </div>
@@ -91,7 +94,7 @@ class Login extends React.Component{
 
 function mapStateToProps(state){
     return{
-      currentUser: state.users.auth
+      loginRedirect: state.users.loginRedirect
     }
 }
 

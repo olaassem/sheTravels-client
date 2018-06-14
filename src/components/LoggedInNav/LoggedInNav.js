@@ -26,7 +26,7 @@ class LoggedInNav extends React.Component{
 
                 <button
                   className="nav-btn">
-                  <Link className="link" to="/" onClick={this.logOutUser.bind(this)><i className="fas fa-sign-out-alt"></i>Log Out</Link>
+                  <Link className="link" to="/" onClick={this.logOutUser.bind(this)}><i className="fas fa-sign-out-alt"></i>Log Out</Link>
                 </button>
 
                 <button className="nav-btn">
