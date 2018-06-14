@@ -40,8 +40,9 @@ class Register extends React.Component{
       if(!response.error){
         this.props.loginUser(user);
       };
-    }).catch((error) =>{
-      console.log(error.response.data.message);
+    }).catch((error) => {
+      let errorMessage = error.response.data.message;
+      console.log(errorMessage);
     });
 
     this.setState({
@@ -101,7 +102,7 @@ class Register extends React.Component{
                         required
                         value={this.state.country}
                         onChange={this.handleChange.bind(this)}>
-                          <option disabled="disabled" value="0">Select Country</option>
+                          <option disabled="disabled" value="0"> -- Select Country --</option>
                           <option value="Afganistan">Afghanistan</option>
                           <option value="Albania">Albania</option>
                           <option value="Algeria">Algeria</option>
@@ -360,7 +361,7 @@ class Register extends React.Component{
                         value={this.state.age}
                         required
                         onChange={this.handleChange.bind(this)}>
-                          <option disabled="disabled" value="0">Select Age Group</option>
+                          <option disabled="disabled" value="0">-- Select Age Group --</option>
                           <option id="age" value="Teens">Teens</option>
                           <option id="age" value="20s">20s</option>
                           <option id="age" value="30s">30s</option>
@@ -371,6 +372,9 @@ class Register extends React.Component{
                       </select>
                     </div>
                   </div>
+
+              <p className="errorMessage"></p>
+
             <button
               className="register-btn"
               type="submit"

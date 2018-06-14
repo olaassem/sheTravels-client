@@ -118,7 +118,8 @@ textarea {
 .ratingIcon,
 .safetyIcon,
 .walletIcon,
-.hangerIcon{
+.hangerIcon,
+.summaryIcon{
   width: 40px;
   height: 40px;
   /* transform: rotate(-30deg); */

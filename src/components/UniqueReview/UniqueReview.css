@@ -1,11 +1,32 @@
 .uniquereview-container{
   border: grey solid 2px;
-  margin: 20px;
+  margin: 20px 0px;
   text-align: left;
-  padding: 10px 30px;
+  padding: 10px;
+}
+
+
+.uniqueReviewVisit,
+.location-box,
+.address-box{
+
+}
+
+.uniqueReviewImg{
+  border: 10px solid #cafafe;
+  float: left;
 }
 
 .stars{
   height: 30px;
   width: 35px;
+}
+
+.features-box{
+  background-color: #cafafe;
+}
+
+.features-box p{
+  font-size: 18px;
+  padding-bottom: 10px;
 }

@@ -12,7 +12,7 @@ export default class AllReviewsContainer extends React.Component{
       <div className="row">
         <div className="col-12">
           <div className="allreviews-container">
-          <h3>All reviews container placeholder</h3>
+          <h3 className="allreviews-header">Reviews</h3>
           <UniqueReview />
         </div>
         </div>
