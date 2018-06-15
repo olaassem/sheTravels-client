@@ -1,10 +1,12 @@
 import React from 'react';
+import {Link, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {registerUser, loginUser} from '../../actions/index';
-import {Redirect} from 'react-router-dom';
-
+import {required, notzero, nonEmpty, length, isTrimmed} from '../validators';
 
 import './Register.css';
+
+const passwordLength = length({min: 10, max: 72});
 
 
 class Register extends React.Component{
@@ -69,7 +71,7 @@ class Register extends React.Component{
                         type="text"
                         name='name'
                         id='name'
-                        required
+                        validate={[required, nonEmpty, isTrimmed]}
                         value={this.state.name}
                         onChange={this.handleChange.bind(this)}
                       />
@@ -80,7 +82,7 @@ class Register extends React.Component{
                         type="text"
                         name='username'
                         id='username'
-                        required
+                        validate={[required, nonEmpty, isTrimmed]}
                         value={this.state.username}
                         onChange={this.handleChange.bind(this)}
                         />
@@ -92,6 +94,7 @@ class Register extends React.Component{
                         name='password'
                         id='password'
                         placeholder="Must be at least 10 characters."
+                        validate={[required, passwordLength, isTrimmed]}
                         value={this.state.password}
                         onChange={this.handleChange.bind(this)}/>
                     </div>
@@ -99,7 +102,7 @@ class Register extends React.Component{
                       <label htmlFor="country">Country of Residence</label>
                       <select
                         name="country"
-                        required
+                        validate={[notzero]}
                         value={this.state.country}
                         onChange={this.handleChange.bind(this)}>
                           <option disabled="disabled" value="0"> -- Select Country --</option>
@@ -358,8 +361,8 @@ class Register extends React.Component{
                     <div className="custom-select">
                       <select
                         name="age"
+                        validate={[notzero]}
                         value={this.state.age}
-                        required
                         onChange={this.handleChange.bind(this)}>
                           <option disabled="disabled" value="0">-- Select Age Group --</option>
                           <option id="age" value="Teens">Teens</option>

@@ -31,15 +31,16 @@ class MapForm extends React.Component {
         types: ['geocode']
       });
 
-    autocomplete.addListener('place_changed', function(){
+    autocomplete.addListener('place_changed',function(){
 
       let place = autocomplete.getPlace();
+      debugger
       // codeAddress(document.getElementById('autocomplete').value);
 
       let address = document.getElementById('autocomplete').value;
       geocoder.geocode({
       		'address': address
-      	}, function( results, status ){
+      	}, function ( results, status ){
 
           console.log(results[0]);
 
@@ -50,26 +51,12 @@ class MapForm extends React.Component {
       			let queryLongitude = results[0].geometry.location.lng();
             let formattedAddress = results[0].formatted_address;
 
-            // debugger
-            // document.addEventListener('click', (e) => {
-            //   this.setState({
-            //     address,
-            //     queryLatitude,
-            //     queryLongitude,
-            //     placeid
-            //   });
-            // })
-
-            // debugger
-            // document.addEventListener('click', function (e) {
-            //   this.setState({
-            //     address,
-            //     queryLatitude,
-            //     queryLongitude,
-            //     placeid
-            //   });
-            // }.bind(this));
-
+            this.setState({
+              address,
+              queryLatitude,
+              queryLongitude,
+              placeid
+            })
 
             console.log(`state: ` + this.state);
 
@@ -77,20 +64,10 @@ class MapForm extends React.Component {
           	} else {
           		console.log( status );
           	}
-        	});
-
-
-    });
+        	}.bind(this))
+    }.bind(this))
   }
 
-  // handleChange(e){
-  //   this.setState({
-  //     address,
-  //     queryLatitude,
-  //     queryLongitude,
-  //     placeid
-  //   });
-  // }
 
 
 
@@ -101,11 +78,16 @@ class MapForm extends React.Component {
   }
 
   render() {
+
     return (
       <form className="mapform">
         <fieldset >
           <legend className="mapform-legend"> Search Location </legend>
           <div id = "locationField">
+
+  <p>{this.state.address}</p>
+
+
             <input id = "autocomplete"
               type = "text"
               placeholder = "e.g. Temple of Heaven"

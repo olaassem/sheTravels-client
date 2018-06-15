@@ -78,6 +78,7 @@ class Login extends React.Component{
                           className="login-btn"
                           onClick={this.loginUser.bind(this)}> Log In
                         </button>
+                        {localStorage.getItem('token') && (<Redirect to="/homepage"/>)}
                       </div>
                     </div>
                   </div>
@@ -85,7 +86,6 @@ class Login extends React.Component{
                       <a className="register-link-link" href="#register-header">Register</a>
                     </p>
                   </fieldset>
-                  {localStorage.getItem('token') && (<Redirect to="/homepage"/>)}
                 </form>
               </div>
             </div>

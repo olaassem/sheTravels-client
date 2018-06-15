@@ -19,7 +19,6 @@ import Wallet from '../../assets/wallet.png';
 import Calendar from '../../assets/calendar.png';
 import Duration from '../../assets/duration.png';
 import Safety from '../../assets/safety.png';
-import Rating from '../../assets/rating.png';
 import Summary from '../../assets/summary.png';
 
 import Holder from '../../assets/images.jpeg';
@@ -81,7 +80,7 @@ class UniqueReview extends React.Component{
               <div className="row">
                 <div className="col-4">
                   <div className="reviewimg-box">
-                    <img className="uniqueReviewImg" src={Holder} alt="location image"/>
+                    <img className="uniqueReviewImg" src={Holder} alt="location"/>
                   </div>
                 </div>
                 <div className="col-8">
@@ -125,7 +124,7 @@ class UniqueReview extends React.Component{
       )
     });
   };
-  }
+};
 }
 
 function mapStateToProps(state){

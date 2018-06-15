@@ -1,14 +1,14 @@
 import axios from 'axios';
 const root_url = "http://localhost:8080";
 
+//import LOCALSTORAGE !!!
+
 //all caps means is something used for code not in business model (a type)
 //differentiate naming convention to show that its a type
 export const REGISTER = "REGISTER";
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
-
 export const SAVE_SEARCH_LOCATION = "SAVE_SEARCH_LOCATION";
-
 export const POST_REVIEW = "POST_REVIEW";
 export const FETCH_ALL_REVIEWS = "FETCH_ALL_REVIEWS";
 

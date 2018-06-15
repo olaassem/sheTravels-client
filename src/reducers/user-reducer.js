@@ -25,13 +25,17 @@ export default function(state=INITIAL_STATE, action){
     //login user and set local storage
     case LOGIN:
     debugger
+
+    let {token, userID, name, country, age} = action.payload.data.data;
+
       saveAuthInfo(
-        action.payload.data.data.token,
-        action.payload.data.data.userID,
-        action.payload.data.data.name,
-        action.payload.data.data.country,
-        action.payload.data.data.age,
+        token,
+        userID,
+        name,
+        country,
+        age
       );
+
       return state = {...state, loginRedirect: true};
 
     //clear local storage

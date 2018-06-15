@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
 
 import './Homepage.css';
 import '../../grid.css';
@@ -7,8 +9,11 @@ import LoggedInNav from '../LoggedInNav/LoggedInNav';
 import Greeting from '../Greeting/Greeting';
 
 
-export default class Homepage extends React.Component{
+
+
+class Homepage extends React.Component{
   render(){
+    debugger
     return(
       <div>
         <LoggedInNav />
@@ -17,3 +22,12 @@ export default class Homepage extends React.Component{
     )
   }
 }
+
+
+function mapStateToProps(state){
+    return{
+      user: state.users
+    }
+}
+
+export default connect(mapStateToProps, {})(Homepage);
