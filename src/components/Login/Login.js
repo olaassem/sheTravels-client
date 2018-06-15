@@ -6,7 +6,6 @@ import {Redirect} from 'react-router-dom';
 import './Login.css';
 
 
-//store userId
 class Login extends React.Component{
   constructor(props){
     super(props);
@@ -25,12 +24,19 @@ class Login extends React.Component{
   loginUser(e){
     e.preventDefault();
     console.log(this.state);
-    this.props.loginUser(this.state);
+    this.props.loginUser(this.state)
+    .catch((error) => {
+      let errorMessage = error.response.data.message;
+      console.log(errorMessage);
+    });
+
+
     this.setState({
       username: "",
       password: ""
     });
   }
+
 
   render(){
     return(
@@ -58,7 +64,7 @@ class Login extends React.Component{
                       <div className="password-container">
                         <label htmlFor="pass-login">Password</label>
                         <input
-                          type="text"
+                          type="password"
                           id="login-password"
                           name="password"
                           required

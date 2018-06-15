@@ -50,15 +50,25 @@ class MapForm extends React.Component {
       			let queryLongitude = results[0].geometry.location.lng();
             let formattedAddress = results[0].formatted_address;
 
-
-            // handleChange(e){
+            // debugger
+            // document.addEventListener('click', (e) => {
             //   this.setState({
             //     address,
             //     queryLatitude,
             //     queryLongitude,
             //     placeid
             //   });
-            // }
+            // })
+
+            // debugger
+            // document.addEventListener('click', function (e) {
+            //   this.setState({
+            //     address,
+            //     queryLatitude,
+            //     queryLongitude,
+            //     placeid
+            //   });
+            // }.bind(this));
 
 
             console.log(`state: ` + this.state);
@@ -84,10 +94,11 @@ class MapForm extends React.Component {
 
 
 
-  // findLocation(e){
-  //   e.preventDefault();
-    // this.props.saveCurrentLocation("Lincoln Memorial");
-  // }
+  postMapInfo(e){
+    e.preventDefault();
+    debugger
+    console.log(this.state);
+  }
 
   render() {
     return (
@@ -105,7 +116,8 @@ class MapForm extends React.Component {
             <div className = "col-12" >
               <button
                 type = "submit"
-                id = "search-btn">
+                id = "search-btn"
+                onClick={this.postMapInfo.bind(this)}>
                 Find
               </button>
             </div>

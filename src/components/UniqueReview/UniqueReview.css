@@ -1,20 +1,52 @@
 .uniquereview-container{
-  border: grey solid 2px;
+  /* border: #cafafe solid 2px; */
   margin: 20px 0px;
   text-align: left;
   padding: 10px;
+  background: white;
 }
 
 
-.uniqueReviewVisit,
-.location-box,
-.address-box{
+.uniqueReviewSubmitted{
+  font-style: italic;
+}
+
+.uniqueReviewUsername,
+.uniqueReviewGroupAge,
+.uniqueReviewCountry{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+
+.bgcolor{
+  background-color: #cafafe;
+}
+
+.group{
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid grey;
+  width:100%;
+  font-size: 17px;
+  padding: 10px 20px;
+  background-color: white;
+  height: 100%;
+  border: 15px solid #cafafe;
 
 }
+
+
+
 
 .uniqueReviewImg{
   border: 10px solid #cafafe;
-  float: left;
+  max-width: 100%;
+}
+
+.clear{
+  clear:both;
 }
 
 .stars{
@@ -24,9 +56,30 @@
 
 .features-box{
   background-color: #cafafe;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .features-box p{
   font-size: 18px;
   padding-bottom: 10px;
+
+}
+
+.calendarIconR,
+.durationIconR,
+.ratingIconR,
+.safetyIconR,
+.walletIconR,
+.hangerIconR,
+.summaryIconR{
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  position: relative;
+}
+
+.uniqueReviewSummary{
+  background-color:  #cafafe;
+  padding: 20px;
 }

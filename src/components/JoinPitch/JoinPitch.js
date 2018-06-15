@@ -9,8 +9,7 @@ export default class JoinPitch extends React.Component{
     return(
       <div className="col-4">
         <div className="joinpitch-container">
-          <h3>{this.props.title}</h3>
-          <p>{this.props.content}</p>
+          <p className= "joinpitch-content">{this.props.content}</p>
         </div>
       </div>
     )

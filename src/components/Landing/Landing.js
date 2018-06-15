@@ -19,9 +19,9 @@ export default class Landing extends React.Component{
         <LandingHeader />
         <div className="joinpitch-section">
           <div className="row">
-            <JoinPitch title="Why Join 1" content="content placeholder 1"/>
-            <JoinPitch title="Why Join 2" content="content placeholder 2"/>
-            <JoinPitch title="Why Join 3" content="content placeholder 3"/>
+            <JoinPitch content="Join the largest & most diverse community of solo female travelers worldwide."/>
+            <JoinPitch content= "Say goodbye to wasting time sifting through endless unhelpful travel sites & threads."/>
+            <JoinPitch content="Find & share destination reviews & tips that matter to you & other solo female travelers."/>
           </div>
         </div>
         <Register />

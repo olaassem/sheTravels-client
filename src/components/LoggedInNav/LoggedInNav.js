@@ -5,10 +5,6 @@ import {logoutUser} from '../../actions/index';
 
 import './LoggedInNav.css';
 
-// import LogoIcon from '../../assets/logo1.png';
-// <img className="logo" src={LogoIcon} alt="SHETravels logo"/>
-
-
 class LoggedInNav extends React.Component{
 
   logOutUser(){
@@ -21,7 +17,6 @@ class LoggedInNav extends React.Component{
         <nav>
           <div className="row">
             <div className="col-12">
-
               <div className="navigation-container">
 
                 <button
@@ -53,7 +48,7 @@ class LoggedInNav extends React.Component{
 
 function mapStateToProps(state){
     return{
-      currentUser: state.users.auth
+      currentUser: state.users.loginRedirect
     }
 }
 
