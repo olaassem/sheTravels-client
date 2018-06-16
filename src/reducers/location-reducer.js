@@ -11,13 +11,13 @@ export default function(state=INITIAL_STATE, action){
 
 
     case SAVE_SEARCH_LOCATION:
-    debugger
       return { ...state, currentSearchLocation: action.payload }
 
     case DISPLAY_MAP_MARKER:
       return { ...state, currentSearchLocation: action.payload }
 
     case GET_PLACE_DETAILS:
+    debugger
       return { ...state, currentSearchLocation: action.payload }
 
     default:

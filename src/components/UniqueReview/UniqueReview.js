@@ -63,19 +63,20 @@ class UniqueReview extends React.Component{
               <div className="col-12">
                 <div className="uniquereview-container">
                 <div className="row">
-                  <div className="col-12">
-                    <p className="uniqueReviewUserCreds">"Username" |  "Age"  | "Country"</p>
-                    <p className="uniqueReviewSubmitted">Reviewed <Moment fromNow>{reviewDateToFormat}</Moment></p>
+                  <div className="col-6">
+                    <div className="userInfo">
+                      <p className="uniqueReviewUser">"Username"</p>
+                      <p className="uniqueReviewUserCreds"> "Age"  <span className="red">|</span> "Country"</p>
+                      <p className="uniqueReviewSubmitted">Reviewed <Moment fromNow>{reviewDateToFormat}</Moment></p>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="rating-box">
+                      <p className="uniqueReviewRating"><img className="stars" src={rating} alt=""/> {review.rating}</p>
+                      <p className="uniqueReviewTitle">{review.title}</p>
+                    </div>
                   </div>
                 </div>
-            <div className="row">
-              <div className="col-12">
-                <div className="rating-box">
-                  <p className="uniqueReviewRating"><img className="stars" src={rating} alt=""/> {review.rating}</p>
-                  <p className="uniqueReviewTitle">{review.title}</p>
-                </div>
-              </div>
-            </div>
             <div className="bgcolor">
               <div className="row">
                 <div className="col-4">
@@ -85,17 +86,17 @@ class UniqueReview extends React.Component{
                 </div>
                 <div className="col-8">
                   <div className="group">
-                    <h4 className="uniqueReviewLocation">"Searched location"</h4>
-                    <p className="uniqueReviewAddress">"Formatted address"</p>
-                    <p className="uniqueReviewVisit"><img className="calendarIconR"  src={Calendar} alt="calendar icon"/> <Moment format="MMMM YYYY">{visitDateToFormat}</Moment> <span className="for">for</span> <img className="durationIconR" src={Duration} alt="sand clock icon"/> {review.duration}</p>
+                    <h4 className="uniqueReviewLocation">"Searched location:" {review.address}</h4>
+                    <p className="uniqueReviewAddress">"Formatted address:" {review.formattedAddress}</p>
+                    <p className="uniqueReviewVisit"><img className="calendarIconR"  src={Calendar} alt="calendar icon"/> <Moment format="MMMM YYYY">{visitDateToFormat}</Moment>  &nbsp;&nbsp;&nbsp;&nbsp;  <img className="durationIconR" src={Duration} alt="sand clock icon"/> {review.duration}</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col-12">
-                <div className="rating-box">
-                  <p className="uniqueReviewSummary"><img className="summaryIconR" src={Summary} alt="chat bubble icon"/>{review.summary}</p>
+                <div className="summary">
+                  <p className="uniqueReviewSummary"><img className="summaryIconR" src={Summary} alt="chat bubble icon"/> &nbsp; {review.summary}</p>
                 </div>
               </div>
             </div>

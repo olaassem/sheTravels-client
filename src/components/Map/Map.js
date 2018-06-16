@@ -41,10 +41,9 @@ class Map extends React.Component {
 
       //New map
       let map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
+        zoom: 14,
         center: location
       });
-
 
       //Location marker
       let marker = new google.maps.Marker({
@@ -57,16 +56,12 @@ class Map extends React.Component {
   render() {
 
     return (
-      <div className="row">
-        <div className="col-12">
-          <div id="map"></div>
-          <p>{this.props.currentLocation.address}</p>
-        </div>
+      <div className="col-8">
+        <div id="map"></div>
       </div>
     )
   }
 }
-
 
 function mapStateToProps(state){
     return{

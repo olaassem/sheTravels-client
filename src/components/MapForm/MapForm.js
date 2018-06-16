@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {saveCurrentLocation} from '../../actions/index';
+import {saveCurrentLocation, getPlaceDetails} from '../../actions/index';
 import {required, nonEmpty, isTrimmed} from '../validators';
 
 import './MapForm.css';
@@ -11,16 +11,17 @@ class MapForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      address: "",
+      address:"",
+      formattedAddress: "",
       queryLatitude: "",
       queryLongitude: "",
-      placeid: ""
+      placeid: "",
+      imageRef:""
     }
   }
 
   componentDidMount() {
 
-    let placeSearch;
     let autocomplete;
     let geocoder;
 
@@ -41,6 +42,7 @@ class MapForm extends React.Component {
       		'address': address
       	}, function ( results, status ){
 
+          console.log(address);
           console.log(results[0]);
 
       		if (status === 'OK') {
@@ -50,20 +52,29 @@ class MapForm extends React.Component {
       			let queryLongitude = results[0].geometry.location.lng();
             let formattedAddress = results[0].formatted_address;
 
+
             this.setState({
-              address: formattedAddress,
+              address,
+              formattedAddress,
               queryLatitude,
               queryLongitude,
-              placeid
+              placeid,
+              imageRef:""
             })
+
+
+            // this.props.getPlaceDetails(placeid);
 
 
             this.props.saveCurrentLocation({
-              address: formattedAddress,
+              address,
+              formattedAddress,
               queryLatitude,
               queryLongitude,
               placeid
             })
+
+            console.log(this.props.currentLocation);
 
           	} else {
           		console.log( status );
@@ -83,7 +94,6 @@ class MapForm extends React.Component {
 
     return (
       <form className="mapform">
-      <p>{this.props.currentLocation.address}</p>
         <fieldset >
           <legend className="mapform-legend"> Search Location </legend>
           <div id = "locationField">
@@ -116,4 +126,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {saveCurrentLocation})(MapForm);
+export default connect(mapStateToProps, {saveCurrentLocation, getPlaceDetails})(MapForm);

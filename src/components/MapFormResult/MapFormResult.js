@@ -11,9 +11,12 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails';
 export default class MapFormResult extends React.Component{
   render(){
     return(
-      <div>
-        <Map />
-        <PlaceDetails />
+      <div className="mapform-results-container">
+      <div className="row">
+
+          <Map />
+          <PlaceDetails />
+        </div>
       </div>
     )
   }

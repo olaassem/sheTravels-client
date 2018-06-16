@@ -6,19 +6,32 @@
   background: white;
 }
 
-
-.uniqueReviewSubmitted{
-  font-style: italic;
+.red{
+  color: #fc4445;
+  font-weight: bold;
 }
 
-.uniqueReviewUsername,
-.uniqueReviewGroupAge,
-.uniqueReviewCountry{
+.uniqueReviewUser,
+.uniqueReviewUserCreds{
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 15px;
 }
 
+.uniqueReviewSubmitted{
+  font-style: italic;
+  font-size: 17px;
+}
+
+.rating-box{
+  text-align: right;
+}
+
+.uniqueReviewTitle,
+.uniqueReviewRating{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .bgcolor{
   background-color: #cafafe;
@@ -34,10 +47,13 @@
   background-color: white;
   height: 100%;
   border: 15px solid #cafafe;
-
 }
 
-
+.uniqueReviewTitle{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+}
 
 
 .uniqueReviewImg{
@@ -73,13 +89,16 @@
 .walletIconR,
 .hangerIconR,
 .summaryIconR{
-  width: 25px;
-  height: 25px;
+  width: 21px;
+  height: 21px;
   top: 5px;
   position: relative;
 }
 
 .uniqueReviewSummary{
-  background-color:  #cafafe;
+  background-color:  white;
+  border: 5px solid #cafafe;
   padding: 20px;
+  margin-bottom: 1px;
+  margin-top: 0px;
 }

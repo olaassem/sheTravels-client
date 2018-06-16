@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {postReview} from '../../actions/index';
+import {saveCurrentLocation, postReview} from '../../actions/index';
 
 import './ReviewForm.css';
 import '../../grid.css';
@@ -16,6 +16,8 @@ class ReviewForm extends React.Component{
   constructor(props){
     super(props);
       this.state = {
+        address:"",
+        formattedAddress:"",
         visit: "",
         duration: "",
         rating: "",
@@ -44,14 +46,39 @@ class ReviewForm extends React.Component{
 
 
   render(){
+
     return(
       <div className="row">
       <div className="col-12">
         <form className="review-form">
           <fieldset>
-            <legend>Review "location"</legend>
-              <div className="row">
+            <legend>Review {this.props.currentLocation.address}</legend>
 
+            <div className="row">
+              <div className="col-12">
+                <div className="locationinfo">
+                <input
+                  type="text"
+                  name="address"
+                  id="reviewform-address"
+                  value={this.props.currentLocation.address}
+                  onChange={this.handleChange.bind(this)}
+                />
+
+                <input
+                  type="text"
+                  name="formattedAddress"
+                  id="reviewform-address"
+                  value={this.props.currentLocation.formattedAddress}
+                  onChange={this.handleChange.bind(this)}
+                />
+
+                </div>
+              </div>
+            </div>
+
+
+              <div className="row">
                 <div className="col-6">
                   <div className="question-container">
                     <p><img className="calendarIcon" src={Calendar} alt="calendar icon"/>When did you visit?</p>
@@ -348,10 +375,11 @@ class ReviewForm extends React.Component{
 function mapStateToProps(state){
     return{
       //return key you want to use and the value from the reducer
-      newReview: state.users.allreviews
+      newReview: state.users.allreviews,
+      currentLocation: state.location.currentSearchLocation
     }
 }
 
 
 //calling connect function:  1.connect reducer with component, 2. connect action w component
-export default connect(mapStateToProps, {postReview})(ReviewForm);
+export default connect(mapStateToProps, {saveCurrentLocation, postReview})(ReviewForm);

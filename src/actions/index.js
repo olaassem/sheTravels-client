@@ -1,10 +1,7 @@
 import axios from 'axios';
 const root_url = "http://localhost:8080";
 
-//import LOCALSTORAGE !!!
 
-//all caps means is something used for code not in business model (a type)
-//differentiate naming convention to show that its a type
 export const REGISTER = "REGISTER";
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
@@ -71,7 +68,6 @@ export const fetchAllReviews = () => {
 // L O C A T I O N
 //pass entire address
 export const saveCurrentLocation = (address) => {
-  debugger
   return{
     type: SAVE_SEARCH_LOCATION,
     payload: address
@@ -88,6 +84,7 @@ export const displayLocationMarker = (coords) => {
 export const getPlaceDetails = (placeid) =>{
   return axios.get(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`)
   .then(request => {
+    debugger
     return {
       type: GET_PLACE_DETAILS,
       payload: request
