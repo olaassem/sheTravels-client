@@ -15,7 +15,7 @@ export default class Greeting extends React.Component{
     return(
 
           <div className="greeting">
-            <h2 className="choice">What would you like to do, "First Name"?</h2>
+            <h2 className="choice">What would you like to do, {localStorage.getItem('name')}?</h2>
             <div className="row">
               <div className="col-6">
                 <div className="review-link">

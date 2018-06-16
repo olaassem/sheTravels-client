@@ -1,11 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {saveCurrentLocation} from '../../actions/index';
+import {required, nonEmpty, isTrimmed} from '../validators';
 
 import './MapForm.css';
 import '../../grid.css';
 
-//create class w/out export default
+
 class MapForm extends React.Component {
   constructor(props){
     super(props);
@@ -34,8 +35,6 @@ class MapForm extends React.Component {
     autocomplete.addListener('place_changed',function(){
 
       let place = autocomplete.getPlace();
-      debugger
-      // codeAddress(document.getElementById('autocomplete').value);
 
       let address = document.getElementById('autocomplete').value;
       geocoder.geocode({
@@ -52,14 +51,19 @@ class MapForm extends React.Component {
             let formattedAddress = results[0].formatted_address;
 
             this.setState({
-              address,
+              address: formattedAddress,
               queryLatitude,
               queryLongitude,
               placeid
             })
 
-            console.log(`state: ` + this.state);
 
+            this.props.saveCurrentLocation({
+              address: formattedAddress,
+              queryLatitude,
+              queryLongitude,
+              placeid
+            })
 
           	} else {
           		console.log( status );
@@ -69,30 +73,24 @@ class MapForm extends React.Component {
   }
 
 
-
-
+//remove
   postMapInfo(e){
     e.preventDefault();
-    debugger
-    console.log(this.state);
+  //pass state to map & place details
   }
 
   render() {
 
     return (
       <form className="mapform">
+      <p>{this.props.currentLocation.address}</p>
         <fieldset >
           <legend className="mapform-legend"> Search Location </legend>
           <div id = "locationField">
-
-  <p>{this.state.address}</p>
-
-
             <input id = "autocomplete"
               type = "text"
               placeholder = "e.g. Temple of Heaven"
-              required
-              // onChange={this.handleChange.bind(this)}
+              validate={[required, nonEmpty, isTrimmed]}
             />
           <div className = "row" >
             <div className = "col-12" >

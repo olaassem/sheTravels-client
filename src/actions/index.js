@@ -8,7 +8,11 @@ const root_url = "http://localhost:8080";
 export const REGISTER = "REGISTER";
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
+
 export const SAVE_SEARCH_LOCATION = "SAVE_SEARCH_LOCATION";
+export const DISPLAY_MAP_MARKER = "DISPLAY_MAP_MARKER";
+export const GET_PLACE_DETAILS = "GET_PLACE_DETAILS"
+
 export const POST_REVIEW = "POST_REVIEW";
 export const FETCH_ALL_REVIEWS = "FETCH_ALL_REVIEWS";
 
@@ -43,7 +47,7 @@ export const logoutUser = () => ({
 // R E V I E W S
 
 export const postReview = (review) =>{
-  const request = axios.post(`${root_url}/review/new`, review)
+  const request = axios.post(`${root_url}/review/new/` + localStorage.getItem('token'), review)
   return{
     type: POST_REVIEW,
     payload: request
@@ -66,9 +70,28 @@ export const fetchAllReviews = () => {
 
 // L O C A T I O N
 //pass entire address
-export const saveCurrentLocation = (address) =>{
+export const saveCurrentLocation = (address) => {
+  debugger
   return{
     type: SAVE_SEARCH_LOCATION,
     payload: address
   }
+}
+
+export const displayLocationMarker = (coords) => {
+  return{
+    type: DISPLAY_MAP_MARKER,
+    payload: coords
+  }
+}
+
+export const getPlaceDetails = (placeid) =>{
+  return axios.get(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`)
+  .then(request => {
+    return {
+      type: GET_PLACE_DETAILS,
+      payload: request
+      }
+    }
+  )
 }

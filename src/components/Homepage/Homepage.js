@@ -13,7 +13,6 @@ import Greeting from '../Greeting/Greeting';
 
 class Homepage extends React.Component{
   render(){
-    debugger
     return(
       <div>
         <LoggedInNav />

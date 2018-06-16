@@ -43,6 +43,8 @@ class Register extends React.Component{
         this.props.loginUser(user);
       };
     }).catch((error) => {
+      debugger
+      console.log(error)
       let errorMessage = error.response.data.message;
       console.log(errorMessage);
     });
