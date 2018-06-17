@@ -10,6 +10,7 @@ export default class JoinPitch extends React.Component{
       <div className="col-4">
         <div className="joinpitch-container">
           <p className= "joinpitch-content">{this.props.content}</p>
+          <img className="joinpitch-img" src={this.props.pic} alt=""/>
         </div>
       </div>
     )
