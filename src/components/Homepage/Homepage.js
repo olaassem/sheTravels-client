@@ -7,7 +7,7 @@ import '../../grid.css';
 
 import LoggedInNav from '../LoggedInNav/LoggedInNav';
 import Greeting from '../Greeting/Greeting';
-
+import UserReviewsContainer from '../UserReviewsContainer/UserReviewsContainer';
 
 
 
@@ -17,11 +17,11 @@ class Homepage extends React.Component{
       <div>
         <LoggedInNav />
         <Greeting />
+        <UserReviewsContainer />
       </div>
     )
   }
 }
-
 
 function mapStateToProps(state){
     return{

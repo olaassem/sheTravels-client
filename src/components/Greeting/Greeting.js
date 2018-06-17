@@ -19,7 +19,7 @@ export default class Greeting extends React.Component{
             <div className="row">
               <div className="col-6">
                 <div className="review-link">
-                  <Link className="link" to="/review">Review a Location
+                  <Link className="choice-link" to="/review">Review a Location
                     <img className="review-img" src={reviewIcon} alt="female traveler sitting down using mobile device"/>
                   </Link>
 
@@ -27,7 +27,7 @@ export default class Greeting extends React.Component{
               </div>
               <div className="col-6">
                 <div className="explore-link">
-                  <Link className="link" to="/explore">Explore Reviews
+                  <Link className="choice-link" to="/explore">Explore Reviews
                     <img className="explore-img" src={exploreIcon} alt="female traveler using binoculars"/>
                   </Link>
 
