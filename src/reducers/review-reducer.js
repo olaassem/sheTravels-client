@@ -21,8 +21,8 @@ export default function(state=INITIAL_STATE, action){
     debugger
       return { ...state, allreviews: action.payload.data };
 
-    case DELETE_USER_REVIEW:
-      return { ...state, allreviews: action.payload.data };
+    // case DELETE_USER_REVIEW:
+    //   return { ...state, allreviews: action.payload.data };
 
 
     default:

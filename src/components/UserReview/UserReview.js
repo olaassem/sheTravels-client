@@ -23,7 +23,7 @@ import Holder from '../../assets/images.jpeg';
 class UserReview extends React.Component{
 
   componentDidMount(){
-    console.log(`this.props:` + this.props);
+    console.log(localStorage.getItem('token'));
     this.props.fetchUserReviews();
   }
 
