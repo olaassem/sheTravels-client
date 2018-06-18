@@ -12,8 +12,8 @@ export const GET_PLACE_DETAILS = "GET_PLACE_DETAILS"
 
 export const POST_REVIEW = "POST_REVIEW";
 export const FETCH_ALL_REVIEWS = "FETCH_ALL_REVIEWS";
-
-
+export const FETCH_USER_REVIEWS = "FETCH_USER_REVIEWS";
+export const DELETE_USER_REVIEW = "DELETE_USER_REVIEW";
 
 
 
@@ -51,7 +51,6 @@ export const postReview = (review) =>{
   }
 }
 
-
 export const fetchAllReviews = () => {
   return axios.get(`${root_url}/review/allreviews`)
   .then(request => {
@@ -63,6 +62,28 @@ export const fetchAllReviews = () => {
   )
 }
 
+export const fetchUserReviews = () => {
+  return axios.get(`${root_url}/review/all/` + localStorage.getItem('token'))
+  .then(request => {
+    debugger
+    return {
+      type: FETCH_USER_REVIEWS,
+      payload: request
+      }
+    }
+  )
+}
+
+export const deleteUserReviews = (reviewID) => {
+  return axios.delete(`${root_url}/review/${reviewID}/` + localStorage.getItem('token'))
+  .then(request => {
+    return {
+      type: DELETE_USER_REVIEW,
+      payload: request
+      }
+    }
+  )
+}
 
 
 // L O C A T I O N
@@ -84,7 +105,6 @@ export const displayLocationMarker = (coords) => {
 export const getPlaceDetails = (placeid) =>{
   return axios.get(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`)
   .then(request => {
-    debugger
     return {
       type: GET_PLACE_DETAILS,
       payload: request

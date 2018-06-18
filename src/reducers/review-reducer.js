@@ -1,27 +1,30 @@
-import {POST_REVIEW, FETCH_ALL_REVIEWS} from '../actions/index'; //import type
+import {POST_REVIEW, FETCH_ALL_REVIEWS, FETCH_USER_REVIEWS, DELETE_USER_REVIEW} from '../actions/index';
 
 
-
-//Initial state for the reducer --> initial state for the reviews
 const INITIAL_STATE = {
-  allreviews:[] //empty array bc initial state will be nothing. you always have to define. it can be null, etc but needs to be defined!!!
+  allreviews:[]
 }
 
-//takes two params: state and action
-//state is everywhere: on component on reducers
-//if the state come w info, that will be the state. if not, or null it will be the initial state.
+
 export default function(state=INITIAL_STATE, action){
   switch (action.type){
-    case FETCH_ALL_REVIEWS:
-    //Return the new state.
-    //has to be a new state combined with the prior state(s).
-    //same as this.setState
-      return { ...state, allreviews: action.payload.data };//will pull prior state
 
     case POST_REVIEW:
       return { ...state, allreviews: action.payload };
 
-    //in a reducer you always have to return a state or else you get an error!!
+
+    case FETCH_ALL_REVIEWS:
+      return { ...state, allreviews: action.payload.data };
+
+
+    case FETCH_USER_REVIEWS:
+    debugger
+      return { ...state, allreviews: action.payload.data };
+
+    case DELETE_USER_REVIEW:
+      return { ...state, allreviews: action.payload.data };
+
+
     default:
       return state;
   }

@@ -1,7 +1,6 @@
 import {SAVE_SEARCH_LOCATION, DISPLAY_MAP_MARKER, GET_PLACE_DETAILS} from '../actions/index';
 
 
-
 const INITIAL_STATE = {
   currentSearchLocation:[]
 }
