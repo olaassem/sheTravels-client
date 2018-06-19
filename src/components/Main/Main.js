@@ -7,6 +7,7 @@ import Landing from '../Landing/Landing';
 import Homepage from '../Homepage/Homepage';
 import Review from '../Review/Review';
 import Explore from '../Explore/Explore';
+import ReviewForm from '../ReviewForm/ReviewForm';
 
 
 
@@ -20,6 +21,7 @@ export default class Main extends React.Component{
           <Route exact path="/homepage" component={Homepage} />
           <Route exact path="/review" component={Review} />
           <Route exact path="/explore" component={Explore} />
+          <Route exact path="/reviewform" component={ReviewForm} />
         </Switch>
       </main>
     )
@@ -45,6 +47,7 @@ export default class Main extends React.Component{
 //           <Route exact path="/homepage" render={() => {return this.renderComponent(Homepage)}} />
 //           <Route exact path="/review" render={() => {return this.renderComponent(Review)}} />
 //           <Route exact path="/explore" render={() => {return this.renderComponent(Explore)}} />
+          // <Route exact path="/reviewform" render={() => {return this.renderComponent(ReviewForm)}} />
 //         </Switch>
 //       </main>
 //     )

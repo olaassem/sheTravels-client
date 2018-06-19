@@ -1,7 +1,12 @@
+.reviewform-container{
+  padding-top: 50px;
+}
+
 .review-form{
   border: 2px solid grey;
   margin: 50px auto;
   text-align: left;
+  border: 10px solid #fc4445;
 }
 
 .review-form legend{
@@ -38,6 +43,8 @@
   width:100%;
 }
 
+#reviewform-formattedAddress,
+#reviewform-address,
 #duration,
 #title,
 #summary{
@@ -118,7 +125,11 @@ textarea {
 .walletIcon,
 .hangerIcon,
 .summaryIcon{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   /* transform: rotate(-30deg); */
+}
+
+.submitform-link{
+  color: white;
 }

@@ -3,6 +3,9 @@ import {connect} from 'react-redux';
 import {saveCurrentLocation, getPlaceDetails} from '../../actions/index';
 import {required, nonEmpty, isTrimmed} from '../validators';
 
+import Map from '../Map/Map';
+import PlaceDetails from '../PlaceDetails/PlaceDetails';
+
 import './MapForm.css';
 import '../../grid.css';
 
@@ -16,7 +19,8 @@ class MapForm extends React.Component {
       queryLatitude: "",
       queryLongitude: "",
       placeid: "",
-      imageRef:""
+      imageRef:"",
+      isHidden: true
     }
   }
 
@@ -59,6 +63,7 @@ class MapForm extends React.Component {
               queryLatitude,
               queryLongitude,
               placeid,
+              isHidden: !this.state.isHidden,
               imageRef:""
             })
 
@@ -84,10 +89,12 @@ class MapForm extends React.Component {
   }
 
 
-//remove
-  postMapInfo(e){
+
+  toggleHidden (e) {
     e.preventDefault();
-  //pass state to map & place details
+    // this.setState({
+    //   isHidden: !this.state.isHidden
+    // })
   }
 
   render() {
@@ -102,16 +109,25 @@ class MapForm extends React.Component {
               placeholder = "e.g. Temple of Heaven"
               validate={[required, nonEmpty, isTrimmed]}
             />
-          <div className = "row" >
-            <div className = "col-12" >
-              <button
-                type = "submit"
-                id = "search-btn"
-                onClick={this.postMapInfo.bind(this)}>
-                Find
-              </button>
+        </div>
+
+        <div className = "col-12" >
+          <button
+            type = "submit"
+            id = "search-btn"
+            onClick={this.toggleHidden.bind(this)}>
+            Find
+          </button>
+          {!this.state.isHidden &&
+            <div className="mapform-results-container">
+              <div className="row">
+                <div className="col-12">
+                  <Map />
+                  <PlaceDetails />
+                </div>
+              </div>
             </div>
-          </div>
+          }
         </div>
       </fieldset>
     </form>

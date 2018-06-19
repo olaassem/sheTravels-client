@@ -2,7 +2,8 @@ import {SAVE_SEARCH_LOCATION, DISPLAY_MAP_MARKER, GET_PLACE_DETAILS} from '../ac
 
 
 const INITIAL_STATE = {
-  currentSearchLocation:[]
+  currentSearchLocation:[],
+  placeDetailsInfo:{}
 }
 
 export default function(state=INITIAL_STATE, action){
@@ -16,8 +17,7 @@ export default function(state=INITIAL_STATE, action){
       return { ...state, currentSearchLocation: action.payload }
 
     case GET_PLACE_DETAILS:
-    debugger
-      return { ...state, currentSearchLocation: action.payload }
+      return { ...state, placeDetailsInfo: action.payload.data.result }
 
     default:
       return state;

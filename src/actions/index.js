@@ -44,6 +44,7 @@ export const logoutUser = () => ({
 // R E V I E W S
 
 export const postReview = (review) =>{
+  review.userID = localStorage.getItem('userId');
   const request = axios.post(`${root_url}/review/new/` + localStorage.getItem('token'), review)
   return{
     type: POST_REVIEW,
@@ -65,7 +66,6 @@ export const fetchAllReviews = () => {
 export const fetchUserReviews = () => {
   return axios.get(`${root_url}/review/all/` + localStorage.getItem('token'))
   .then(request => {
-    debugger
     return {
       type: FETCH_USER_REVIEWS,
       payload: request

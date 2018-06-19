@@ -1,3 +1,10 @@
+.loading-gif{
+  width: 120px;
+  height: 120px;
+  /* padding-top: 50px; */
+}
+
+
 .uniquereview-container{
   /* border: #cafafe solid 2px; */
   margin: 20px 0px;

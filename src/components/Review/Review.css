@@ -4,5 +4,6 @@
 
 
 .mapform-container{
-  padding-top: 140px;
+  padding-top: 50px;
+  min-height: 93vh;
 }

@@ -14,6 +14,7 @@ import twoIcon from "../../assets/2.png";
 import oneIcon from "../../assets/1.png";
 
 //fields icons
+import Loading from '../../assets/Loading.gif';
 import Hanger from '../../assets/hanger.png';
 import Wallet from '../../assets/wallet.png';
 import Calendar from '../../assets/calendar.png';
@@ -27,6 +28,7 @@ class UniqueReview extends React.Component{
 
   componentDidMount(){
     this.props.fetchAllReviews();
+
   }
 
 
@@ -35,11 +37,13 @@ class UniqueReview extends React.Component{
     console.log(dbReviews);
     if(!dbReviews){
       return(
-        <h1>Loading...</h1>
+        <img className="loading-gif" src={Loading} alt="loading gif"/>
       )
     }else{
+
         return dbReviews.map((review, index) => {
 
+console.log(review.picture)
         const reviewDateToFormat = review.submitted;
         const visitDateToFormat = review.visit;
 
@@ -65,8 +69,8 @@ class UniqueReview extends React.Component{
                 <div className="row">
                   <div className="col-6">
                     <div className="userInfo">
-                      <p className="uniqueReviewUser">"Username"</p>
-                      <p className="uniqueReviewUserCreds"> "Age"  <span className="red">|</span> "Country"</p>
+                      <p className="uniqueReviewUser">{review.name}</p>
+                      <p className="uniqueReviewUserCreds"> {review.age}  <span className="red">|</span> {review.country}</p>
                       <p className="uniqueReviewSubmitted">Reviewed <Moment fromNow>{reviewDateToFormat}</Moment></p>
                     </div>
                   </div>
@@ -81,13 +85,13 @@ class UniqueReview extends React.Component{
               <div className="row">
                 <div className="col-4">
                   <div className="reviewimg-box">
-                    <img className="uniqueReviewImg" src={Holder} alt="location"/>
+                    <img className="uniqueReviewImg" src={review.picture} alt="location"/>
                   </div>
                 </div>
                 <div className="col-8">
                   <div className="group">
-                    <h4 className="uniqueReviewLocation">"Searched location:" {review.address}</h4>
-                    <p className="uniqueReviewAddress">"Formatted address:" {review.formattedAddress}</p>
+                    <h4 className="uniqueReviewLocation">{review.address}</h4>
+                    <p className="uniqueReviewAddress">{review.formattedAddress}</p>
                     <p className="uniqueReviewVisit"><img className="calendarIconR"  src={Calendar} alt="calendar icon"/> <Moment format="MMMM YYYY">{visitDateToFormat}</Moment>  &nbsp;&nbsp;&nbsp;&nbsp;  <img className="durationIconR" src={Duration} alt="sand clock icon"/> {review.duration}</p>
                   </div>
                 </div>

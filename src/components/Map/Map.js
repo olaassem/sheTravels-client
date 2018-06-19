@@ -12,8 +12,8 @@ class Map extends React.Component {
       const google= window.google;
 
       let location = {
-        lat: 35.0116,
-        lng: 135.7680
+        lat: 34.5531,
+        lng: 18.0480
       };
 
       //New map

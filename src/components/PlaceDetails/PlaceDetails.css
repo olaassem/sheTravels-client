@@ -12,16 +12,26 @@
 
 
 .destination-img-container{
-  width: 150px;
+  width: 220px;
   height: 150px;
   border: grey solid 1px;
-  float: left;
-  margin-right: 15px
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .location,
 .address{
-  text-align: left;
+  text-align: center;
+  margin: 5px 0px;
+}
+
+.location{
+  margin-top: 13px;
+}
+
+.address{
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .review-btn{
