@@ -31,7 +31,6 @@ class UniqueReview extends React.Component{
 
   }
 
-
   render(){
     let dbReviews = this.props.allReviews;
     console.log(dbReviews);

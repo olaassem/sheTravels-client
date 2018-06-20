@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Redirect} from 'react-router-dom';
+// import {Link, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {registerUser, loginUser} from '../../actions/index';
 import {required, notzero, nonEmpty, length, isTrimmed} from '../validators';
@@ -386,7 +386,7 @@ class Register extends React.Component{
               onClick={this.registerUser.bind(this)}> Register
             </button>
           </fieldset>
-          {localStorage.getItem('token') && (<Redirect to="/homepage"/>)}
+
          </form>
         </div>
        </div>
@@ -395,6 +395,10 @@ class Register extends React.Component{
     )
   }
 }
+
+
+
+// {localStorage.getItem('token') && (<Redirect to="/homepage"/>)}
 
 
 

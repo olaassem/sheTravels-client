@@ -74,7 +74,7 @@ export const fetchUserReviews = () => {
   )
 }
 
-export const deleteUserReviews = (reviewID) => {
+export const deleteUserReview = (reviewID) => {
   return axios.delete(`${root_url}/review/${reviewID}/` + localStorage.getItem('token'))
   .then(request => {
     return {
