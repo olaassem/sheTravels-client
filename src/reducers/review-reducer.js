@@ -2,7 +2,8 @@ import {POST_REVIEW, FETCH_ALL_REVIEWS, FETCH_USER_REVIEWS, DELETE_USER_REVIEW} 
 
 
 const INITIAL_STATE = {
-  allreviews:[]
+  allreviews:[],
+  userreviews: []
 }
 //add different key for new review.
 
@@ -19,10 +20,10 @@ export default function(state=INITIAL_STATE, action){
 
     case FETCH_USER_REVIEWS:
     debugger
-      return { ...state, allreviews: action.payload.data };
+      return { ...state, userreviews: action.payload.data };
 
-    // case DELETE_USER_REVIEW:
-    //   return { ...state, allreviews: action.payload.data };
+    case DELETE_USER_REVIEW:
+      return { ...state, userreviews: action.payload.data };
 
 
     default:

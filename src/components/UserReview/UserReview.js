@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchUserReviews} from '../../actions/index';
+import {fetchUserReviews, deleteUserReview} from '../../actions/index';
 import Moment from 'react-moment';
 import './UserReview.css';
 
@@ -12,6 +12,7 @@ import twoIcon from "../../assets/2.png";
 import oneIcon from "../../assets/1.png";
 
 //fields icons
+import Loading from '../../assets/Loading.gif';
 import Hanger from '../../assets/hanger.png';
 import Wallet from '../../assets/wallet.png';
 import Calendar from '../../assets/calendar.png';
@@ -27,13 +28,22 @@ class UserReview extends React.Component{
     this.props.fetchUserReviews();
   }
 
-  render(){
+  deleteReview(e){
+    e.preventDefault();
+    this.props.deleteUserReview(e.target.value);
+  }
 
-    let userReviews = this.props.allReviews;
+  render(){
+    console.log(this.props)
+    let userReviews = this.props.userReviews;
+
     console.log(`user reviews:` + userReviews);
+
+    debugger
+
     if(!userReviews){
       return(
-        <h1>Loading...</h1>
+        <img className="loading-gif" src={Loading} alt="loading gif"/>
       )
     }else{
         return userReviews.map((review, index) => {
@@ -63,9 +73,9 @@ class UserReview extends React.Component{
                 <div className="row">
                   <div className="col-6">
                     <div className="userInfo">
-                      <p className="uniqueReviewUser">"Username"</p>
-                      <p className="uniqueReviewUserCreds"> "Age"  <span className="red">|</span> "Country"</p>
-                      <p className="uniqueReviewSubmitted">Reviewed <Moment fromNow>{reviewDateToFormat}</Moment></p>
+                    <p className="uniqueReviewUser">{review.name}</p>
+                    <p className="uniqueReviewUserCreds"> {review.age}  <span className="red">|</span> {review.country}</p>
+                    <p className="uniqueReviewSubmitted">Reviewed <Moment fromNow>{reviewDateToFormat}</Moment></p>
                     </div>
                   </div>
                   <div className="col-6">
@@ -84,8 +94,8 @@ class UserReview extends React.Component{
                 </div>
                 <div className="col-8">
                   <div className="group">
-                    <h4 className="uniqueReviewLocation">"Searched location:" {review.address}</h4>
-                    <p className="uniqueReviewAddress">"Formatted address:" {review.formattedAddress}</p>
+                    <h4 className="uniqueReviewLocation">{review.address}</h4>
+                    <p className="uniqueReviewAddress">{review.formattedAddress}</p>
                     <p className="uniqueReviewVisit"><img className="calendarIconR"  src={Calendar} alt="calendar icon"/> <Moment format="MMMM YYYY">{visitDateToFormat}</Moment>  &nbsp;&nbsp;&nbsp;&nbsp;  <img className="durationIconR" src={Duration} alt="sand clock icon"/> {review.duration}</p>
                   </div>
                 </div>
@@ -117,6 +127,18 @@ class UserReview extends React.Component{
                 </div>
               </div>
             </div>
+            <div className="row">
+              <div className="col-12">
+                <div className="deletebtn-container">
+                <button
+                  className="deletebtn"
+                  type="submit"
+                  value={review._id}
+                  onClick={this.deleteReview.bind(this)}> Delete Review
+                </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -128,9 +150,9 @@ class UserReview extends React.Component{
 
 function mapStateToProps(state){
     return {
-      userReviews: state.reviews.allreviews.data
+      userReviews: state.reviews.userreviews.data
     }
 }
 
 
-export default connect(mapStateToProps, {fetchUserReviews})(UserReview);
+export default connect(mapStateToProps, {fetchUserReviews, deleteUserReview})(UserReview);

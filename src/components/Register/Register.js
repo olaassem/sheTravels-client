@@ -378,15 +378,31 @@ class Register extends React.Component{
                     </div>
                   </div>
 
-              <p className="errorMessage"></p>
+            <div className="row">
+              <div className="col-12">
+                <button
+                  className="register-btn"
+                  type="submit"
+                  onClick={this.registerUser.bind(this)}> Register
+                </button>
+              </div>
+            </div>
 
-            <button
-              className="register-btn"
-              type="submit"
-              onClick={this.registerUser.bind(this)}> Register
-            </button>
+            <div className="row">
+              <div className="col-12">
+                <p className="demo-creds">Demo Credentials</p>
+              </div>
+            </div>  
+            <div className="row">
+              <div className="col-6">
+                <p className="demo">Username: <span className="italic">demo</span></p>
+              </div>
+              <div className="col-6">
+                <p className="demo">Password: <span className="italic">demopass123</span></p>
+              </div>
+            </div>
+
           </fieldset>
-
          </form>
         </div>
        </div>

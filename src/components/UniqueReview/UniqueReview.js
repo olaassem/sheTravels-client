@@ -44,7 +44,7 @@ debugger
 
         return dbReviews.map((review, index) => {
 
-console.log(review.picture)
+
         const reviewDateToFormat = review.submitted;
         const visitDateToFormat = review.visit;
 

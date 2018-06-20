@@ -16,9 +16,9 @@
 
 
 .register-legend{
-  font-size: 30px;
+  font-size: 27px;
   font-weight: bold;
-  padding: 20px;
+  padding: 7px 20px;
 }
 
 
@@ -39,11 +39,12 @@
   float: left;
   margin-left: 10px;
   margin-bottom: 5px;
+  font-size: 19px;
 }
 
 
 .register-btn{
-  margin: 26px auto 0px auto;
+  margin: 10px auto 10px auto;
   background: #fc4445;
   cursor: pointer;
   color: white;
@@ -58,16 +59,25 @@
   border: none;
 }
 
-.register-btn:hover{
-  /* background-color: #DB57DB; */
-}
-
-
-
-
 
 select{
   display: block;
   font-size: 20px;
   text-indent: 5px;
+}
+
+
+.demo-creds{
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.demo{
+  font-size: 15px;
+  margin: 5px;
+}
+
+.italic{
+  font-style: italic;
+  font-weight: bold;
 }
