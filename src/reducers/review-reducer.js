@@ -4,7 +4,7 @@ import {POST_REVIEW, FETCH_ALL_REVIEWS, FETCH_USER_REVIEWS, DELETE_USER_REVIEW} 
 const INITIAL_STATE = {
   allreviews:[]
 }
-
+//add different key for new review.
 
 export default function(state=INITIAL_STATE, action){
   switch (action.type){

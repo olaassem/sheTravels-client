@@ -40,6 +40,8 @@ class UniqueReview extends React.Component{
       )
     }else{
 
+debugger
+
         return dbReviews.map((review, index) => {
 
 console.log(review.picture)
