@@ -31,6 +31,8 @@ class MapForm extends React.Component {
 
     const google = window.google;
 
+console.log('map form mounted')
+ 
     geocoder = new google.maps.Geocoder();
     autocomplete = new google.maps.places.Autocomplete(
       (document.getElementById('autocomplete')), {
