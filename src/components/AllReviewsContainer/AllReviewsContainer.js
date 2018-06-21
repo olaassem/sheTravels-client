@@ -9,10 +9,10 @@ import UniqueReview from '../UniqueReview/UniqueReview';
 export default class AllReviewsContainer extends React.Component{
   render(){
     return(
-      <div className="row">
+      <div className="row colorred">
         <div className="col-12">
           <div className="allreviews-container">
-          <h2 className="allreviews-header">Reviews</h2>
+          <h2 className="allreviews-header">SHE Travelers{"'"} Reviews</h2>
           <UniqueReview />
         </div>
         </div>

@@ -39,13 +39,12 @@ class UserReview extends React.Component{
 
     console.log(`user reviews:` + userReviews);
 
-    debugger
-
     if(!userReviews){
       return(
         <img className="loading-gif" src={Loading} alt="loading gif"/>
       )
     }else{
+
         return userReviews.map((review, index) => {
 
         const reviewDateToFormat = review.submitted;
@@ -69,7 +68,7 @@ class UserReview extends React.Component{
           return(
             <div className="row" key={index}>
               <div className="col-12">
-                <div className="uniquereview-container">
+                <div className="userreview-container">
                 <div className="row">
                   <div className="col-6">
                     <div className="userInfo">
@@ -85,8 +84,8 @@ class UserReview extends React.Component{
                     </div>
                   </div>
                 </div>
-            <div className="bgcolor">
-              <div className="row">
+
+              <div className="row bgcolor">
                 <div className="col-4">
                   <div className="reviewimg-box">
                     <img className="uniqueReviewImg" src={Holder} alt="location"/>
@@ -100,14 +99,8 @@ class UserReview extends React.Component{
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-12">
-                <div className="summary">
-                  <p className="uniqueReviewSummary"><img className="summaryIconR" src={Summary} alt="chat bubble icon"/> &nbsp; {review.summary}</p>
-                </div>
-              </div>
-            </div>
+
+
             <div className="clear">
               <div className="row">
                 <div className="col-4">
@@ -127,6 +120,15 @@ class UserReview extends React.Component{
                 </div>
               </div>
             </div>
+
+            <div className="row removepadding">
+              <div className="col-12">
+                <div className="summary">
+                  <p className="uniqueReviewSummary"><img className="summaryIconR" src={Summary} alt="chat bubble icon"/> &nbsp; {review.summary}</p>
+                </div>
+              </div>
+            </div>
+
             <div className="row">
               <div className="col-12">
                 <div className="deletebtn-container">

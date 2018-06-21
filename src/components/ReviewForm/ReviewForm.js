@@ -66,7 +66,7 @@ class ReviewForm extends React.Component{
                   <div className="row">
                     <div className="col-6">
                       <div className="question-container">
-                        <p><img className="calendarIcon" src={Calendar} alt="calendar icon"/>When did you visit?</p>
+                        <p><img className="calendarIcon" src={Calendar} alt="calendar icon"/>When did you last visit?</p>
                         <input
                           type="month"
                           name="visit"

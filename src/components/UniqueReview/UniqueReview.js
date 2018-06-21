@@ -40,8 +40,6 @@ class UniqueReview extends React.Component{
       )
     }else{
 
-debugger
-
         return dbReviews.map((review, index) => {
 
 
@@ -98,13 +96,7 @@ debugger
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-12">
-                <div className="summary">
-                  <p className="uniqueReviewSummary"><img className="summaryIconR" src={Summary} alt="chat bubble icon"/> &nbsp; {review.summary}</p>
-                </div>
-              </div>
-            </div>
+
             <div className="clear">
               <div className="row">
                 <div className="col-4">
@@ -124,6 +116,15 @@ debugger
                 </div>
               </div>
             </div>
+
+            <div className="row removepadding">
+              <div className="col-12">
+                <div className="summary">
+                  <p className="uniqueReviewSummary"><img className="summaryIconR" src={Summary} alt="chat bubble icon"/> &nbsp; {review.summary}</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

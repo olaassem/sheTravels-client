@@ -19,7 +19,6 @@ export default function(state=INITIAL_STATE, action){
 
 
     case FETCH_USER_REVIEWS:
-    debugger
       return { ...state, userreviews: action.payload.data };
 
     case DELETE_USER_REVIEW:

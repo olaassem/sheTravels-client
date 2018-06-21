@@ -1,0 +1,27 @@
+.userreview-container{
+  border: #55bcc9 solid 10px;
+  margin: 20px 0px;
+  text-align: left;
+  padding: 20px;
+  background: white;
+}
+
+
+.removepadding{
+  padding: 0px;
+}
+
+
+.deletebtn{
+  margin: 13px auto 2px;
+  margin-right: auto;
+  background: #55bcc9;
+  cursor: pointer;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: none;
+}

@@ -6,11 +6,12 @@
 
 
 .uniquereview-container{
-  /* border: #cafafe solid 2px; */
+  border: #3feee6 solid 13px;
   margin: 20px 0px;
   text-align: left;
   padding: 10px;
   background: white;
+  margin-bottom: 10px;
 }
 
 .red{
@@ -23,11 +24,13 @@
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 15px;
+  text-align: left;
 }
 
 .uniqueReviewSubmitted{
   font-style: italic;
   font-size: 17px;
+  text-align: left;
 }
 
 .rating-box{
@@ -42,6 +45,8 @@
 
 .bgcolor{
   background-color: #cafafe;
+  padding: 0px;
+  margin-bottom: 10px;
 }
 
 .group{
@@ -79,7 +84,7 @@
 
 .features-box{
   background-color: #cafafe;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   text-align: center;
 }
 
@@ -107,5 +112,11 @@
   border: 5px solid #cafafe;
   padding: 20px;
   margin-bottom: 1px;
-  margin-top: 0px;
+  margin-top: 8px;
+}
+
+.uniqueReviewSafety,
+.uniqueReviewBudget,
+.uniqueReviewDress{
+  margin: 7px;
 }

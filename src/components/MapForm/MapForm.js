@@ -103,6 +103,7 @@ class MapForm extends React.Component {
       <form className="mapform">
         <fieldset >
           <legend className="mapform-legend"> Search Location </legend>
+          <p className="instruction">Type in the location you want to review & select an option from the dropdown.</p>
           <div id = "locationField">
             <input id = "autocomplete"
               type = "text"
@@ -113,6 +114,7 @@ class MapForm extends React.Component {
 
         <div className = "col-12" >
           <button
+            className="hidden"
             type = "submit"
             id = "search-btn"
             onClick={this.toggleHidden.bind(this)}>

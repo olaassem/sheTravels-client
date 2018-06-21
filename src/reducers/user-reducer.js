@@ -19,12 +19,10 @@ export default function(state=INITIAL_STATE, action){
     case REGISTER:
     console.log(saveAuthInfo)
 
-    debugger
       return state = {...state, loginRedirect: false};
 
     //login user and set local storage
     case LOGIN:
-    debugger
 
     let {token, userID, name, country, age} = action.payload.data.data;
 

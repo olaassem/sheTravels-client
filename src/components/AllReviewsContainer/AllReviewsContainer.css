@@ -1,10 +1,14 @@
 .allreviews-container{
   margin-top: 100px;
   min-height: 77vh;
-  background: #3feee6;
 }
 
 .allreviews-header{
   margin-bottom: 5px;
   padding-top: 15px;
+  font-size: 38px;
 }
+
+/* .colorred{
+  background-color: #fc4445;
+} */
