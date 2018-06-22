@@ -25,3 +25,15 @@
   font-size: 14px;
   border: none;
 }
+
+
+.uniqueReviewImg{
+  border: 10px solid #cafafe;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+}

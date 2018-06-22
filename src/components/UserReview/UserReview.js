@@ -31,6 +31,10 @@ class UserReview extends React.Component{
     this.props.deleteUserReview(e.target.value);
   }
 
+  componentDidUpdate(){
+    this.props.fetchUserReviews();
+  }
+
   render(){
     let userReviews = this.props.userReviews;
 

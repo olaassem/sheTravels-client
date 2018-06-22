@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {saveCurrentLocation, getPlaceDetails, postReview} from '../../actions/index';
-import {required, notzero, nonEmpty, length, isTrimmed} from '../validators';
+import {required, notzero, nonEmpty} from '../validators';
 import LoggedInNav from '../LoggedInNav/LoggedInNav';
 
 import './ReviewForm.css';
@@ -361,10 +361,8 @@ class ReviewForm extends React.Component{
 }
 
 
-//mapping the state(this.reducer) to props(in component)
 function mapStateToProps(state){
     return{
-      //return key you want to use and the value from the reducer
       newReview: state.users.allreviews,
       currentLocation: state.location.currentSearchLocation,
       placeDetailsInfo: state.location.placeDetailsInfo
@@ -372,5 +370,4 @@ function mapStateToProps(state){
 }
 
 
-//calling connect function:  1.connect reducer with component, 2. connect action w component
-export default connect(mapStateToProps, {saveCurrentLocation, postReview})(ReviewForm);
+export default connect(mapStateToProps, {saveCurrentLocation, getPlaceDetails, postReview})(ReviewForm);

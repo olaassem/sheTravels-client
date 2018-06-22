@@ -10,7 +10,7 @@ import AllReviewsContainer from '../AllReviewsContainer/AllReviewsContainer';
 export default class Explore extends React.Component{
   render(){
     return(
-      <div colorred>
+      <div>
         <LoggedInNav />
         <AllReviewsContainer />
       </div>

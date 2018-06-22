@@ -22,7 +22,6 @@ import Duration from '../../assets/duration.png';
 import Safety from '../../assets/safety.png';
 import Summary from '../../assets/summary.png';
 
-import Holder from '../../assets/images.jpeg';
 
 class UniqueReview extends React.Component{
 
@@ -33,7 +32,6 @@ class UniqueReview extends React.Component{
 
   render(){
     let dbReviews = this.props.allReviews;
-    console.log(dbReviews);
     if(!dbReviews){
       return(
         <img className="loading-gif" src={Loading} alt="loading gif"/>

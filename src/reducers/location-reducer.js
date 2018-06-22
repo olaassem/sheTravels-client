@@ -17,7 +17,6 @@ export default function(state=INITIAL_STATE, action){
       return { ...state, currentSearchLocation: action.payload }
 
     case GET_PLACE_DETAILS:
-    debugger
       return { ...state, placeDetailsInfo: action.payload.data.result }
 
     default:

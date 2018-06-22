@@ -12,7 +12,7 @@ export default class AllReviewsContainer extends React.Component{
       <div className="row colorred">
         <div className="col-12">
           <div className="allreviews-container">
-          <h2 className="allreviews-header">SHE Travelers{"'"} Reviews</h2>
+          <h2 className="allreviews-header"><span className="appfont">SHE Travelers{"'"} </span>Reviews</h2>
           <UniqueReview />
         </div>
         </div>

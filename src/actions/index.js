@@ -105,7 +105,6 @@ export const displayLocationMarker = (coords) => {
 export const getPlaceDetails = (placeid) =>{
   return axios.get(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`)
   .then(request => {
-    debugger
     return {
       type: GET_PLACE_DETAILS,
       payload: request

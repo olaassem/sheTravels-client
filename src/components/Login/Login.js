@@ -23,7 +23,6 @@ class Login extends React.Component{
 
   loginUser(e){
     e.preventDefault();
-    console.log(this.state);
     this.props.loginUser(this.state)
     .catch((error) => {
       let errorMessage = error.response.data.message;
