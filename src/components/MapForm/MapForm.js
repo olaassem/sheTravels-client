@@ -31,8 +31,6 @@ class MapForm extends React.Component {
 
     const google = window.google;
 
-console.log('map form mounted')
- 
     geocoder = new google.maps.Geocoder();
     autocomplete = new google.maps.places.Autocomplete(
       (document.getElementById('autocomplete')), {
@@ -48,11 +46,7 @@ console.log('map form mounted')
       		'address': address
       	}, function ( results, status ){
 
-          console.log(address);
-          console.log(results[0]);
-
       		if (status === 'OK') {
-
             let placeid = results[0].place_id;
       			let queryLatitude = results[0].geometry.location.lat();
       			let queryLongitude = results[0].geometry.location.lng();
@@ -81,8 +75,6 @@ console.log('map form mounted')
               placeid
             })
 
-            console.log(this.props.currentLocation);
-
           	} else {
           		console.log( status );
           	}
@@ -94,9 +86,6 @@ console.log('map form mounted')
 
   toggleHidden (e) {
     e.preventDefault();
-    // this.setState({
-    //   isHidden: !this.state.isHidden
-    // })
   }
 
   render() {
@@ -116,7 +105,6 @@ console.log('map form mounted')
 
         <div className = "col-12" >
           <button
-            className="hidden"
             type = "submit"
             id = "search-btn"
             onClick={this.toggleHidden.bind(this)}>

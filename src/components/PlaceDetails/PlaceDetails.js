@@ -10,9 +10,6 @@ import '../../grid.css';
 
 class PlaceDetails extends React.Component{
 
-
-//only do something if the props have changed.
-//
   componentDidUpdate(prevProps){
     let placeid = this.props.currentLocation.placeid;
     console.log(placeid);
@@ -32,7 +29,7 @@ class PlaceDetails extends React.Component{
 
        let imageRef = this.props.placeDetailsInfo.photos[0].photo_reference;
 
-       let imageURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=` + imageRef + `&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`;
+       let imageURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=` + imageRef + `&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`;
        console.log(imageURL);
 
 
@@ -41,7 +38,7 @@ class PlaceDetails extends React.Component{
       <div className="col-4">
         <div className="placedetails-container">
           <div className="destination-img-container">
-            <img src={imageURL} alt=""/>
+            <img className="destination-img" src={imageURL} alt=""/>
           </div>
             <h4 className="location">{this.props.currentLocation.address}</h4>
             <p className="address">{this.props.currentLocation.formattedAddress}</p>
@@ -62,7 +59,7 @@ class PlaceDetails extends React.Component{
 function mapStateToProps(state){
     return{
       currentLocation: state.location.currentSearchLocation,
-      placeDetailsInfo: state.location.placeDetailsInfo,
+      placeDetailsInfo: state.location.placeDetailsInfo
     }
 }
 

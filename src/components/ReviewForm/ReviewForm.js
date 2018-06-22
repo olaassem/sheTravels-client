@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {saveCurrentLocation, postReview} from '../../actions/index';
+import {saveCurrentLocation, getPlaceDetails, postReview} from '../../actions/index';
 import {required, notzero, nonEmpty, length, isTrimmed} from '../validators';
 import LoggedInNav from '../LoggedInNav/LoggedInNav';
 
@@ -24,7 +24,7 @@ class ReviewForm extends React.Component{
         name: localStorage.getItem('name'),
         age: localStorage.getItem('age'),
         country: localStorage.getItem('country'),
-        picture:"https://placeimg.com/640/480/arch",
+        picture: this.props.placeDetailsInfo.photos[0].photo_reference,
         address: this.props.currentLocation.address,
         formattedAddress: this.props.currentLocation.formattedAddress,
         visit: "",
@@ -366,7 +366,8 @@ function mapStateToProps(state){
     return{
       //return key you want to use and the value from the reducer
       newReview: state.users.allreviews,
-      currentLocation: state.location.currentSearchLocation
+      currentLocation: state.location.currentSearchLocation,
+      placeDetailsInfo: state.location.placeDetailsInfo
     }
 }
 

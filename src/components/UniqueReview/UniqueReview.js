@@ -84,7 +84,9 @@ class UniqueReview extends React.Component{
               <div className="row">
                 <div className="col-4">
                   <div className="reviewimg-box">
-                    <img className="uniqueReviewImg" src={review.picture} alt="location"/>
+                    <img className="uniqueReviewImg"
+                      src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=` + review.picture + `&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`}
+                      alt="location"/>
                   </div>
                 </div>
                 <div className="col-8">

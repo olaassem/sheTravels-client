@@ -19,12 +19,10 @@ import Calendar from '../../assets/calendar.png';
 import Duration from '../../assets/duration.png';
 import Safety from '../../assets/safety.png';
 import Summary from '../../assets/summary.png';
-import Holder from '../../assets/images.jpeg';
 
 class UserReview extends React.Component{
 
   componentDidMount(){
-    console.log(localStorage.getItem('token'));
     this.props.fetchUserReviews();
   }
 
@@ -34,10 +32,7 @@ class UserReview extends React.Component{
   }
 
   render(){
-    console.log(this.props)
     let userReviews = this.props.userReviews;
-
-    console.log(`user reviews:` + userReviews);
 
     if(!userReviews){
       return(
@@ -88,7 +83,9 @@ class UserReview extends React.Component{
               <div className="row bgcolor">
                 <div className="col-4">
                   <div className="reviewimg-box">
-                    <img className="uniqueReviewImg" src={Holder} alt="location"/>
+                    <img className="uniqueReviewImg"
+                      src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=` + review.picture + `&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`}
+                      alt="location"/>
                   </div>
                 </div>
                 <div className="col-8">
