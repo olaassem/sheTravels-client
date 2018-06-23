@@ -13,61 +13,40 @@ A goal without a plan is a wish. **_[bringit](https://bringit-app.herokuapp.com/
 #### Landing Page
 
 ![landing page](screenshots/1landing.png)
-
-
-#### Sign-up & Log-in Modals
-
-![register & login modal](screenshots/2login.png)
-
+![join pitch](screenshots/2landing.png)
+![register](screenshots/3landing.png)
 
 #### Homepage
-Upon successful login, users are directed to bringit's homepage. Users are greeted with a random inspiring fit quote. For more inspiration, just click on the #fitspire_me button!
+Upon successful login, users are directed to their SHE Travels' homepage. Users are greeted with a choice to explore reviews or add a new review. The user's own reviews are also displayed on the homepage.
 
-![homepage](screenshots/3home.png)
-
-
-#### Fitweek
-The fitweek section is where users can add, view, edit, and delete their customised day plans for each day of the week.
-
-![fit week dayplan](screenshots/4dayplan.png)
+![homepage](screenshots/4homepage.png)
 
 
-#### Day Plan Form
-To add (and edit) a day plan, users go through a quick 3-step form:
+#### Location Search
+Using Google Maps API, users can search for the location they wish to review. Upon selection of a location from the dropdown, a map of the location, picture, and formatted address appear. If the user wishes to review the location, they simply click on the review button and they will be directed to the Review Form page.
+
+![location search](screenshots/5search.png)
 
 
-##### 1. Categories
-Users may post, delete, and select new categories.
+##### Review Form
 
-![step 1 - categories](screenshots/6dayplanform.png)
-
-
-##### 2. Activity
-Users may post activity details.
-
-![step 1 - activity](screenshots/6dayplanform2.png)
+![review form](screenshots/6reviewform.png)
 
 
-##### 3. Exercises
-Users may post, delete, edit and select exercises before submitting their customised day plan.
+##### Explore Reviews
+All SHE Travels users' reviews appear on this page. 
 
-![step 3 - exercises](screenshots/6dayplanform3.png)
-
-
-#### Fit Goals
-Users may add, edit, delete, _and_ check their fit goals as completed. To see how far they've come, users can also view their fit goal history log.
-
-![fitgoal](screenshots/5fitgoal.png)
-
+![explore](screenshots/7explore.png)
 
 ## Technologies Used
 
 ### Front End
 
+* React
+* Redux
 * HTML5
 * CSS3
 * JavaScript
-* jQuery
 
 
 ### Back End
