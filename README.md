@@ -14,7 +14,7 @@ A goal without a plan is a wish. **_[bringit](https://bringit-app.herokuapp.com/
 
 ![landing page](screenshots/1landing.png)
 ![join pitch](screenshots/2landing.png)
-![register](screenshots/3landing.png)
+![register](screenshots/3register.png)
 
 #### Homepage
 Upon successful login, users are directed to their SHE Travels' homepage. Users are greeted with a choice to explore reviews or add a new review. The user's own reviews are also displayed on the homepage.
