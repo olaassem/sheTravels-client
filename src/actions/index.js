@@ -1,5 +1,6 @@
 import axios from 'axios';
-const root_url = "http://localhost:8080";
+// const root_url = "http://localhost:8080";
+const root_url = "https://shetravels.herokuapp.com";
 
 
 export const REGISTER = "REGISTER";
@@ -103,7 +104,7 @@ export const displayLocationMarker = (coords) => {
 }
 
 export const getPlaceDetails = (placeid) =>{
-  return axios.get(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`)
+  return axios.get(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=AIzaSyAd5YqpjgL__uXevBwgPfrxxYemhoeB2UY`)
   .then(request => {
     return {
       type: GET_PLACE_DETAILS,

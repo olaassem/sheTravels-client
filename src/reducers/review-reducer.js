@@ -10,7 +10,7 @@ export default function(state=INITIAL_STATE, action){
   switch (action.type){
 
     case POST_REVIEW:
-      return { ...state, allreviews: action.payload };
+      return { ...state, allreviews: [...action.payload] };
 
     case FETCH_ALL_REVIEWS:
       return { ...state, allreviews: action.payload.data };

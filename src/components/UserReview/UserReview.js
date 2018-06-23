@@ -29,11 +29,12 @@ class UserReview extends React.Component{
   deleteReview(e){
     e.preventDefault();
     this.props.deleteUserReview(e.target.value);
+    window.location.reload(true);
   }
 
-  componentDidUpdate(){
-    this.props.fetchUserReviews();
-  }
+  // componentDidUpdate(){
+  //   this.props.fetchUserReviews();
+  // }
 
   render(){
     let userReviews = this.props.userReviews;
@@ -88,7 +89,7 @@ class UserReview extends React.Component{
                 <div className="col-4">
                   <div className="reviewimg-box">
                     <img className="uniqueReviewImg"
-                      src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=` + review.picture + `&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`}
+                      src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=` + review.picture + `&key=AIzaSyAd5YqpjgL__uXevBwgPfrxxYemhoeB2UY`}
                       alt="location"/>
                   </div>
                 </div>

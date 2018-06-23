@@ -29,7 +29,7 @@ class PlaceDetails extends React.Component{
 
        let imageRef = this.props.placeDetailsInfo.photos[0].photo_reference;
 
-       let imageURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=` + imageRef + `&key=AIzaSyA6ECb06GHjgfRQjrOJKy6tQqScBimbFmA`;
+       let imageURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=240&photoreference=` + imageRef + `&key=AIzaSyAd5YqpjgL__uXevBwgPfrxxYemhoeB2UY`;
        console.log(imageURL);
 
 
