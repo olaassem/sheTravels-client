@@ -387,6 +387,21 @@ class Register extends React.Component{
                 </button>
               </div>
             </div>
+
+            <div className="row">
+              <div className="col-12">
+                <p className="demo-creds">Demo Credentials</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-6">
+                <p className="demo">Username: <span className="italic">demo</span></p>
+              </div>
+              <div className="col-6">
+                <p className="demo">Password: <span className="italic">demouserpass</span></p>
+              </div>
+            </div>
+
           </fieldset>
          </form>
         </div>
