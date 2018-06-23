@@ -1,6 +1,6 @@
 # _SHE Travels_
 
-A goal without a plan is a wish. **_[bringit](https://bringit-app.herokuapp.com/)_** is a full-stack web application that provides users with both daily motivational and planning tools to conquer their fitness goals.
+**_[SHE Travels](https://shetravels.netlify.com/)_** is a full-stack travel review web application for solo female travelers by other solo female travelers. This is a one-stop app for solo female travelers to share their experiences and get the information that matters most to their traveling style.
 
 
 ## Demo
@@ -44,9 +44,10 @@ All SHE Travels users' reviews appear on this page.
 
 * React
 * Redux
-* HTML5
+* Axios
+* React Router
+* HTML5/CSS3
 * CSS3
-* JavaScript
 
 
 ### Back End
@@ -56,8 +57,13 @@ All SHE Travels users' reviews appear on this page.
 * MongoDB
 * Mongoose
 * MVC framework
-* Bcrypt
+* Bcryptjs
 * JWT
+
+
+## Powered by
+
+* Location search is powered by Google Maps API
 
 
 ## Contributor
