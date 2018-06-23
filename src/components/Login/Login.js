@@ -81,9 +81,6 @@ class Login extends React.Component{
                       </div>
                     </div>
                   </div>
-                  <p className="register-link">Do not have an account?
-                    <a className="register-link-link" href="#register-header">Register</a>
-                  </p>
                   </fieldset>
                 </form>
               </div>
