@@ -5,7 +5,6 @@
 footer{
   color: #3B3B3B;
   background-color: #3feee6;
-  height: 55px;
   width: 100%;
   bottom: 0;
   margin: 0;
@@ -14,22 +13,17 @@ footer{
 .footer-content{
   margin: auto;
   padding-top:10px;
+  padding-bottom: 10px;
   top: 20px;
 }
 
 .fa-github-square,
 .fa-linkedin{
+  text-align: center;
   font-size: 40px;
 }
 
-.githubIcon-container{
-  float: left;
-  margin: 0px 25px;
-}
-
+.githubIcon-container,
 .linkedinIcon-container{
-  float: left;
-  margin: 0px 25px;
-  width: 30px;
-  height: 30px;
+  padding: 0px 30px;
 }
