@@ -54,43 +54,45 @@ class LoggedInNav extends React.Component{
                     <i className="fa fa-bars fa-2x" onClick={this.burgerToggle}></i>
                   </div>
                 </div>
-                <div className="narrowLinks">
 
-                  <div className="row">
-                    <div className="col-12">
-                      <button className="narrow-nav-btn" onClick={this.burgerToggle}>
-                        <Link className="linknarrow" to="/homepage"><i className="fas fa-home narrowIcon"></i>&nbsp;&nbsp;Home</Link>
-                      </button>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-12">
-                      <button className="narrow-nav-btn" onClick={this.burgerToggle}>
-                        <Link className="linknarrow" to="/review"><i className="fas fa-star narrowIcon"></i>&nbsp;&nbsp;Review</Link>
-                      </button>
-                      </div>
-                    </div>
 
-                  <div className="row">
-                    <div className="col-12">
-                      <button className="narrow-nav-btn" onClick={this.burgerToggle}>
-                        <Link className="linknarrow" to="/explore"><i className="fas fa-map-signs narrowIcon"></i>&nbsp;&nbsp;Explore</Link>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-12">
-                      <button
-                        className="narrow-nav-btn" onClick={this.burgerToggle}>
-                        <Link className="linknarrow" to="/" onClick={this.logOutUser.bind(this)}><i className="fas fa-sign-out-alt narrowIcon"></i>&nbsp;&nbsp;Log Out</Link>
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
               </div>
             </div>
+          </div>
+          <div className="narrowLinks">
+
+            <div className="row">
+              <div className="col-12">
+                <button className="narrow-nav-btn" onClick={this.burgerToggle}>
+                  <Link className="linknarrow" to="/homepage"><i className="fas fa-home narrowIcon"></i>&nbsp;&nbsp;Home</Link>
+                </button>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-12">
+                <button className="narrow-nav-btn" onClick={this.burgerToggle}>
+                  <Link className="linknarrow" to="/review"><i className="fas fa-star narrowIcon"></i>&nbsp;&nbsp;Review</Link>
+                </button>
+                </div>
+              </div>
+
+            <div className="row">
+              <div className="col-12">
+                <button className="narrow-nav-btn" onClick={this.burgerToggle}>
+                  <Link className="linknarrow" to="/explore"><i className="fas fa-map-signs narrowIcon"></i>&nbsp;&nbsp;Explore</Link>
+                </button>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-12">
+                <button
+                  className="narrow-nav-btn" onClick={this.burgerToggle}>
+                  <Link className="linknarrow" to="/" onClick={this.logOutUser.bind(this)}><i className="fas fa-sign-out-alt narrowIcon"></i>&nbsp;&nbsp;Log Out</Link>
+                </button>
+              </div>
+            </div>
+
           </div>
         </nav>
       </div>
