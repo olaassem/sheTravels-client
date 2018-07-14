@@ -33,11 +33,6 @@ nav {
 }
 
 
-.fa-bars{
-  font-size: 45px;
-  color: #fc4445;
-  float: right;
-}
 
 .narrow-nav-btn{
   width: 100%;
@@ -93,8 +88,26 @@ nav {
   .navWide{
     display: none;
   }
-  .navNarrow{
+
+  .navNarrow {
     display: block;
     cursor: pointer;
   }
+
+  .fa-bars{
+    font-size: 45px;
+    color: #fc4445;
+    float: right;
+  }
+
+  .narrowLinks {
+    display: none;
+  }
+
+  .narrowLinks Link {
+    display: block;
+    float: right;
+    clear: right;
+  }
+
 }
