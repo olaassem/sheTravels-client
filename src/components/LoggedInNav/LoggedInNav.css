@@ -21,9 +21,10 @@ nav {
   margin-bottom: 5px;
 }
 
-.nav-btn{
+
+.wide-nav-btn{
   background: transparent;
-  float:right;
+  float: right;
   align-items: right;
   justify-content: center;
   border: none;
@@ -31,10 +32,69 @@ nav {
   width: 60px;
 }
 
+
+.fa-bars{
+  font-size: 45px;
+  color: #fc4445;
+  float: right;
+}
+
+.narrow-nav-btn{
+  width: 100%;
+  background-color: #3feee6;
+  border: none;
+  padding: 10px;
+  -webkit-transition: background-color 1s ease;
+  -moz-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+}
+
+.narrow-nav-btn .fa-home{
+  padding-top: 22px;
+}
+
+.narrowIcon{
+  font-size: 27px;
+}
+
+.linknarrow{
+  font-size: 20px;
+  float: right;
+}
+
+.narrow-nav-btn:hover{
+  background-color: #cafafe;
+  color: #55bcc9;
+}
+
+
 .logo{
   width: 129px;
   height: 60px;
   float: left;
   margin-left: 0px;
   margin-right:0px;
+}
+
+@media only screen and (min-width: 640px) {
+
+  .navNarrow{
+    display: none;
+  }
+
+  .navWide{
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 639px) {
+  .navWide{
+    display: none;
+  }
+  .navNarrow{
+    display: block;
+    cursor: pointer;
+  }
 }
