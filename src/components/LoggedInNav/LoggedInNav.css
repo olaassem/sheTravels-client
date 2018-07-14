@@ -36,7 +36,7 @@ nav {
 
 
 .logo{
-  width: 129px;
+  width: 90px;
   height: 60px;
   float: left;
   margin-left: 0px;
@@ -46,6 +46,7 @@ nav {
 @media only screen and (min-width: 640px) {
 
   .narrowLinks,
+  .narrow-nav-btn,
   .navNarrow{
     display: none;
   }
@@ -78,7 +79,7 @@ nav {
 
   .narrowLinks Link {
     display: block;
-    float: right;
+    float: left;
     clear: right;
   }
 
@@ -106,7 +107,7 @@ nav {
   }
 
   .linknarrow{
-    font-size: 20px;
+    font-size: 17px;
     float: right;
   }
 

@@ -5,6 +5,8 @@ import {logoutUser} from '../../actions/index';
 
 import './LoggedInNav.css';
 
+import appLogo from "../../assets/logo.png";
+
 class LoggedInNav extends React.Component{
 
   logOutUser(){
@@ -29,6 +31,7 @@ class LoggedInNav extends React.Component{
 
               <div className="navWide">
                 <div className="wideDiv">
+                  <img src={appLogo} className="logo" alt="SHE Travels app logo"/>
                   <button
                     className="wide-nav-btn">
                     <Link className="link" to="/" onClick={this.logOutUser.bind(this)}><i className="fas fa-sign-out-alt wideIcon"></i>Log Out</Link>
@@ -51,11 +54,10 @@ class LoggedInNav extends React.Component{
               <div className="navNarrow">
                 <div className="row">
                   <div className="col-12">
+                    <img src={appLogo} className="logo" alt="SHE Travels app logo"/>
                     <i className="fa fa-bars fa-2x" onClick={this.burgerToggle}></i>
                   </div>
                 </div>
-
-
               </div>
             </div>
           </div>
