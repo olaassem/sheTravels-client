@@ -33,15 +33,13 @@ nav {
 }
 
 
-
-
 .logo{
-  width: 90px;
-  height: 60px;
+  width: 75px;
+  height: 45px;
   float: left;
-  margin-left: 0px;
-  margin-right:0px;
+  margin: 5px 0px;
 }
+
 
 @media only screen and (min-width: 640px) {
 
@@ -68,9 +66,10 @@ nav {
   }
 
   .fa-bars{
-    font-size: 45px;
+    font-size: 47px;
     color: #fc4445;
     float: right;
+    margin: 5px 0px;
   }
 
   .narrowLinks {
