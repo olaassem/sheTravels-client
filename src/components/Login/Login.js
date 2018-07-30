@@ -20,8 +20,7 @@ class Login extends React.Component{
     scrollTo(){
       scroller.scrollTo('register', {
         duration: 2000,
-        smooth: true,
-        // offset: {-200}
+        smooth: true
       });
     }
 

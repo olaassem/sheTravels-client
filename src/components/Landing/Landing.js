@@ -13,6 +13,10 @@ import Globe from '../../assets/globe.png';
 import Time from  '../../assets/time.png';
 import Share from '../../assets/share.png';
 
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+
 
 export default class Landing extends React.Component{
 
@@ -28,6 +32,7 @@ export default class Landing extends React.Component{
             <JoinPitch content="Find & share destination reviews & tips that matter to you & other solo female travelers." pic={Share}/>
           </div>
         </div>
+        <Element name="register"></Element>
         <Register />
       </div>
     )
