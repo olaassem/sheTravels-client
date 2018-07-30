@@ -3,6 +3,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {registerUser, loginUser} from '../../actions/index';
 import {required, notzero, nonEmpty, length, isTrimmed} from '../validators';
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 import './Register.css';
 
@@ -60,7 +63,8 @@ class Register extends React.Component{
 
   render(){
     return(
-      <div className="register-section">
+      <div className="register-section" id="scrollContainer">
+        <Element name="register"></Element>
         <div className="row">
           <div className="col-12">
             <div className="register-container">

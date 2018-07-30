@@ -2,8 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {loginUser} from '../../actions/index';
 import {Redirect} from 'react-router-dom';
-
 import './Login.css';
+
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 class Login extends React.Component{
@@ -13,6 +15,14 @@ class Login extends React.Component{
         username: "",
         password: ""
       }
+    }
+
+    scrollTo(){
+      scroller.scrollTo('register', {
+        duration: 2000,
+        smooth: true,
+        // offset: {-200}
+      });
     }
 
   handleChange(e){
@@ -34,6 +44,7 @@ class Login extends React.Component{
       username: "",
       password: ""
     });
+
   }
 
 
@@ -81,6 +92,17 @@ class Login extends React.Component{
                       </div>
                     </div>
                   </div>
+                  <p className="register-link">Do not have an account? &nbsp;
+                    <Link
+
+                      className="register-link-link"
+                      to="register"
+                      activeClass="active"
+                      spy={true}
+                      onClick={() => this.scrollTo()}>
+                      Register
+                    </Link>
+                  </p>
                   </fieldset>
                 </form>
               </div>

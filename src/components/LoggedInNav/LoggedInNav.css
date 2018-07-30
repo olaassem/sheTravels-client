@@ -98,7 +98,7 @@ nav {
   }
 
   .narrow-nav-btn .fa-home{
-    padding-top: 22px;
+    padding-top: 10px;
   }
 
   .narrowIcon{
@@ -107,7 +107,7 @@ nav {
 
   .linknarrow{
     font-size: 17px;
-    float: right;
+    text-align: center;
   }
 
   .narrow-nav-btn:hover{

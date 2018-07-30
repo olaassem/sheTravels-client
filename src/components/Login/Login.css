@@ -112,6 +112,7 @@ nav{
     text-decoration: none;
     color: #3B3B3B;
     padding: 5px;
+    font-weight: bold;
 }
 
 .register-link-link:visited {
@@ -121,6 +122,7 @@ nav{
 
 .register-link-link:hover {
   color: #fc4445;
+  cursor: pointer;
 
 }
 
