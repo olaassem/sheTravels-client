@@ -97,10 +97,6 @@ nav{
   border: none;
 }
 
-.login-btn:hover{
-  /* background-color: #DB57DB; */
-}
-
 .register-link{
   margin: 5px;
   margin-top: 6px;
@@ -123,6 +119,7 @@ nav{
 .register-link-link:hover {
   color: #fc4445;
   cursor: pointer;
+  font-weight: bold;
 
 }
 
